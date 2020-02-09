@@ -13,6 +13,18 @@
         <element id="directory" name="classes">
           <element id="module-output" name="escalade-webapp" />
         </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="escalade-model-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="escalade-model" />
+          </element>
+          <element id="archive" name="escalade-business-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="escalade-business" />
+          </element>
+          <element id="archive" name="escalade-consumer-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="escalade-consumer" />
+          </element>
+          <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:1.2.7" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/escalade/escalade-webapp/target/escalade-webapp/META-INF/MANIFEST.MF" />
