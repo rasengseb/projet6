@@ -24,7 +24,6 @@
             <element id="module-output" name="escalade-consumer" />
           </element>
           <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:1.2.7" />
-          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
