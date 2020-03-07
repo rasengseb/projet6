@@ -1,13 +1,13 @@
 package org.example.site;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class site {
+public class Site {
     private int id;
     private String nom;
-    private Localisation localisation;
-    private ArrayList<Secteur> secteurs;
-    private boolean haveTopo;
+    private Adresse localisation;
+    private List<Secteur> secteurs;
     private boolean isOfficiel;
 
 
@@ -27,28 +27,20 @@ public class site {
         this.nom = nom;
     }
 
-    public Localisation getLocalisation() {
+    public Adresse getLocalisation() {
         return localisation;
     }
 
-    public void setLocalisation(Localisation localisation) {
+    public void setLocalisation(Adresse localisation) {
         this.localisation = localisation;
     }
 
-    public ArrayList<Secteur> getSecteurs() {
+    public List<Secteur> getSecteurs() {
         return secteurs;
     }
 
-    public void setSecteurs(ArrayList<Secteur> secteurs) {
+    public void setSecteurs(List<Secteur> secteurs) {
         this.secteurs = secteurs;
-    }
-
-    public boolean isHaveTopo() {
-        return haveTopo;
-    }
-
-    public void setHaveTopo(boolean haveTopo) {
-        this.haveTopo = haveTopo;
     }
 
     public boolean isOfficiel() {

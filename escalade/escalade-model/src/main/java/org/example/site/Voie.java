@@ -1,9 +1,19 @@
 package org.example.site;
 
 public class Voie {
+    private int id;
     private int idSecteur;
     private String nom;
     private Cotation cotation;
+    private int longueur;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getIdSecteur() {
         return idSecteur;
@@ -27,5 +37,13 @@ public class Voie {
 
     public void setCotation(Cotation cotation) {
         this.cotation = cotation;
+    }
+
+    public int getLongueur() {
+        return longueur;
+    }
+
+    public void setLongueur(int longueur) {
+        this.longueur = longueur;
     }
 }

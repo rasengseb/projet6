@@ -1,11 +1,12 @@
 package org.example.site;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Region {
     private int id;
     private String nom;
-    private ArrayList<Departement> departements;
+    private List<Departement> departements;
 
     public int getId() {
         return id;
@@ -23,11 +24,11 @@ public class Region {
         this.nom = nom;
     }
 
-    public ArrayList<Departement> getDepartements() {
+    public List<Departement> getDepartements() {
         return departements;
     }
 
-    public void setDepartements(ArrayList<Departement> departements) {
+    public void setDepartements(List<Departement> departements) {
         this.departements = departements;
     }
 }
