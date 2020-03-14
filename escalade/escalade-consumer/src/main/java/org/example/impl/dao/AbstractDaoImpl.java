@@ -1,7 +1,7 @@
 package org.example.impl.dao;
 
-import com.sun.istack.internal.Interned;
-
+import javax.inject.Inject;
+import javax.inject.Named;
 import javax.sql.DataSource;
 
 public abstract class AbstractDaoImpl {

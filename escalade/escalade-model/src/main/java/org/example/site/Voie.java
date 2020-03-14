@@ -1,11 +1,14 @@
 package org.example.site;
 
+import java.util.List;
+
 public class Voie {
     private int id;
-    private int idSecteur;
+    private Secteur secteur;
     private String nom;
     private Cotation cotation;
     private int longueur;
+    private List<Image> images;
 
     public int getId() {
         return id;
@@ -15,12 +18,12 @@ public class Voie {
         this.id = id;
     }
 
-    public int getIdSecteur() {
-        return idSecteur;
+    public Secteur getSecteur() {
+        return secteur;
     }
 
-    public void setIdSecteur(int idSecteur) {
-        this.idSecteur = idSecteur;
+    public void setSecteur(Secteur secteur) {
+        this.secteur = secteur;
     }
 
     public String getNom() {
@@ -45,5 +48,13 @@ public class Voie {
 
     public void setLongueur(int longueur) {
         this.longueur = longueur;
+    }
+
+    public List<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(List<Image> images) {
+        this.images = images;
     }
 }

@@ -2,7 +2,7 @@ package org.example.site;
 
 public class Cotation {
     private int id;
-    private String nom;
+    private String cote;
 
     public int getId() {
         return id;
@@ -12,11 +12,11 @@ public class Cotation {
         this.id = id;
     }
 
-    public String getNom() {
-        return nom;
+    public String getQuote() {
+        return cote;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setQuote(String cote) {
+        this.cote = cote;
     }
 }

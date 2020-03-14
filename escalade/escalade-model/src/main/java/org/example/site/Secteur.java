@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Secteur {
     private int id;
-    private int idSite;
+    private Site site;
     private List<Voie> voies;
-    private String cheminImage;
+    private List<Image> images;
 
     public int getId() {
         return id;
@@ -16,12 +16,12 @@ public class Secteur {
         this.id = id;
     }
 
-    public int getIdSite() {
-        return idSite;
+    public Site getSite() {
+        return site;
     }
 
-    public void setIdSite(int idSite) {
-        this.idSite = idSite;
+    public void setSite(Site site) {
+        this.site = site;
     }
 
     public List<Voie> getVoies() {
@@ -32,11 +32,11 @@ public class Secteur {
         this.voies = voies;
     }
 
-    public String getCheminImage() {
-        return cheminImage;
+    public List<Image> getImages() {
+        return images;
     }
 
-    public void setCheminImage(String cheminImage) {
-        this.cheminImage = cheminImage;
+    public void setImages(List<Image> images) {
+        this.images = images;
     }
 }

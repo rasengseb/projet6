@@ -6,8 +6,10 @@ import java.util.List;
 public class Site {
     private int id;
     private String nom;
-    private Adresse localisation;
+    private Adresse adresse;
     private List<Secteur> secteurs;
+    private List<Image> images;
+    private List<Commentaire> commentaires;
     private boolean isOfficiel;
 
 
@@ -27,12 +29,12 @@ public class Site {
         this.nom = nom;
     }
 
-    public Adresse getLocalisation() {
-        return localisation;
+    public Adresse getAdresse() {
+        return adresse;
     }
 
-    public void setLocalisation(Adresse localisation) {
-        this.localisation = localisation;
+    public void setAdresse(Adresse adresse) {
+        this.adresse = adresse;
     }
 
     public List<Secteur> getSecteurs() {
@@ -41,6 +43,22 @@ public class Site {
 
     public void setSecteurs(List<Secteur> secteurs) {
         this.secteurs = secteurs;
+    }
+
+    public List<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(List<Image> images) {
+        this.images = images;
+    }
+
+    public List<Commentaire> getCommentaires() {
+        return commentaires;
+    }
+
+    public void setCommentaires(List<Commentaire> commentaires) {
+        this.commentaires = commentaires;
     }
 
     public boolean isOfficiel() {
