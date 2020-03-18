@@ -28,6 +28,31 @@
 </div>
 
 <%--Corps de la page web--%>
+<div class="row">
+    <div class="col-lg-6">
+        <form method="post" action="index.jsp">
+            <fieldset>
+                <legend>S'inscrire</legend>
+                <label for="ipseudo">Pseudo : </label> <input type="text" name="ipseudo" id="ipseudo">
+                <label for="imdp">Mot de passe : </label> <input type="password" name="imdp" id="imdp">
+                <label for="inom">Nom : </label> <input type="text" name="inom" id="inom">
+                <label for="iprenom">Prénom : </label> <input type="text" name="iprenom" id="iprenom">
+                <label for="imail">Mail : </label> <input type="email" name="imail" id="imail">
+                <input type="submit" value="S'inscrire" name="inscrire" id="inscrire">
+            </fieldset>
+        </form>
+    </div>
+    <div class="col-lg-6">
+        <form method="post" action="index.jsp">
+            <fieldset>
+                <legend>Se Connecter</legend>
+                <label>Pseudo : </label> <input type="text" name="cpseudo" id="cpseudo">
+                <label> Mot de Passe : </label> <input type="password" name="cmdp" id="cmdp">
+                <input type="submit" value="Connection" name="connection" id="connection">
+            </fieldset>
+        </form>
+    </div>
+</div>
 
 <footer>
     <div class="row">

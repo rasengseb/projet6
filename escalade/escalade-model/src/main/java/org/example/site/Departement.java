@@ -2,7 +2,7 @@ package org.example.site;
 
 public class Departement {
     private int id;
-    private int numero;
+    private String numero;
     private String nom;
 
     public int getId() {
@@ -13,11 +13,11 @@ public class Departement {
         this.id = id;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
