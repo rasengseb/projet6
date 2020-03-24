@@ -8,6 +8,7 @@ public class Voie {
     private String nom;
     private Cotation cotation;
     private int longueur;
+    private String description;
     private List<Image> images;
 
     public int getId() {
@@ -48,6 +49,14 @@ public class Voie {
 
     public void setLongueur(int longueur) {
         this.longueur = longueur;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public List<Image> getImages() {
