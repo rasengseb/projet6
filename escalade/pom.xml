@@ -103,6 +103,15 @@
                 <version>1</version>
             </dependency>
 
+            <!-- Drivers JDBC PostgreSQL -->
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>9.4.1212</version>
+                <scope>runtime</scope>
+            </dependency>
+
+
             <!-- Drivers JDBC postgreSQL -->
             <dependency>
                 <groupId>org.postgresql</groupId>
