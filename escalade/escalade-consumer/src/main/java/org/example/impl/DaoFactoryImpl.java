@@ -4,7 +4,9 @@ import org.example.contract.DaoFactory;
 import org.example.contract.dao.UtilisateurDao;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
+@Named("daoFactory")
 public class DaoFactoryImpl implements DaoFactory {
 
     @Inject

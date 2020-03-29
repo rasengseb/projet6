@@ -3,6 +3,9 @@ package org.example.impl.dao;
 import org.example.contract.dao.UtilisateurDao;
 import org.example.bean.Utilisateur;
 
+import javax.inject.Named;
+
+@Named
 public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
     @Override
     public void create(Utilisateur utilisateur) {
