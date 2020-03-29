@@ -1,9 +1,9 @@
 package org.example.impl.dao;
 
 import org.example.contract.dao.UtilisateurDao;
-import org.example.profile.Utilisateur;
+import org.example.bean.Utilisateur;
 
-public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDao {
+public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
     @Override
     public void create(Utilisateur utilisateur) {
 

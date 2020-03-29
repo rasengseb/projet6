@@ -4,10 +4,35 @@
          version="3.0">
     <servlet>
         <servlet-name>Servlet</servlet-name>
-        <servlet-class>com.rasen.escalade.servlet.Servlet</servlet-class>
+        <servlet-class>org.example.servlet.Servlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Servlet</servlet-name>
         <url-pattern>/Accueil</url-pattern>
     </servlet-mapping>
+
+    <display-name>escalade</display-name>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:/bootstrapContext.xml</param-value>
+    </context-param>
+
+    <resource-ref>
+        <res-ref-name>jdbc/escalade</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
 </web-app>

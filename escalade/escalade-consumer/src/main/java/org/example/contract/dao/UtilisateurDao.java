@@ -1,6 +1,6 @@
 package org.example.contract.dao;
 
-import org.example.profile.Utilisateur;
+import org.example.bean.Utilisateur;
 
 public interface UtilisateurDao {
 
