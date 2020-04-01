@@ -4,19 +4,16 @@ import org.example.bean.Utilisateur;
 import org.example.exception.NotFoundException;
 import org.example.rest.resource.AbstractResource;
 
+import javax.inject.Named;
 import java.util.List;
 
-
+@Named
 public class UtilisateurResource extends AbstractResource {
 
 
-    public Utilisateur getUtilisateur(Integer pId) throws NotFoundException {
-        Utilisateur utilisateur = getManagerFactory().getUtilisateurManager().getUtilisateur(pId);
+    public Utilisateur connexion (String pseudo, String mdp){
+        Utilisateur utilisateur = getManagerFactory().getUtilisateurManager().connexion(pseudo, mdp);
         return utilisateur;
     }
 
-    public List<Utilisateur> getListUtilisateur() {
-        List<Utilisateur> list = getManagerFactory().getUtilisateurManager().getListUtilisateur();
-        return list;
-    }
 }

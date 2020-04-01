@@ -5,18 +5,17 @@ import org.example.bean.Utilisateur;
 import org.example.exception.NotFoundException;
 
 import javax.inject.Named;
+import javax.rmi.CORBA.Util;
 import java.util.List;
 
 @Named
 public class UtilisateurManagerImpl extends AbstractManager implements UtilisateurManager {
 
-    @Override
-    public List<Utilisateur> getListUtilisateur() {
-        return null;
-    }
 
     @Override
-    public Utilisateur getUtilisateur(Integer pId) throws NotFoundException {
-        return null;
+    public Utilisateur connexion(String pseudo, String mdp) {
+        Utilisateur utilisateur = getDaoFactory().getUtilisateurDao().connexion(pseudo,mdp);
+
+        return utilisateur;
     }
 }

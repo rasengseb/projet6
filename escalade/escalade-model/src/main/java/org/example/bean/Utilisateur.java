@@ -64,4 +64,16 @@ public class Utilisateur {
     public void setAdmin(boolean admin) {
         isAdmin = admin;
     }
+
+    public String toString() {
+        return "Utilisateur{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", pseudo='" + pseudo + '\'' +
+                ", mdp='" + mdp + '\'' +
+                ", mail='" + mail + '\'' +
+                ", isAdmin=" + isAdmin +
+                '}';
+    }
 }

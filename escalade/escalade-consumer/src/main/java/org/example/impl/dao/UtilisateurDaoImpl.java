@@ -1,29 +1,34 @@
 package org.example.impl.dao;
 
-import org.example.contract.dao.UtilisateurDao;
 import org.example.bean.Utilisateur;
+import org.example.contract.dao.UtilisateurDao;
+import org.example.impl.rowMapper.UtilisateurRM;
+import org.springframework.jdbc.core.JdbcTemplate;
 
+import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.List;
 
 @Named
 public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
-    @Override
-    public void create(Utilisateur utilisateur) {
 
+    @Inject
+    UtilisateurRM utilisateurRM;
+
+
+    @Override
+    public Utilisateur connexion(String pseudo, String mdp) {
+        String vSQL ="SELECT * FROM utilisateur WHERE pseudo=" + pseudo +" AND mdp =" + mdp;
+
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSource());
+        List<Utilisateur> listUtilisateur = jdbcTemplate.query(vSQL, utilisateurRM);
+        Utilisateur utilisateur = listUtilisateur.get(0);
+
+        return  utilisateur;
     }
 
     @Override
-    public boolean connexion(Utilisateur utilisateur) {
-        return false;
-    }
+    public void inscription(Utilisateur utilisateur) {
 
-    @Override
-    public boolean update(Utilisateur utilisateur) {
-        return false;
-    }
-
-    @Override
-    public Utilisateur search(String pseudo) {
-        return null;
     }
 }

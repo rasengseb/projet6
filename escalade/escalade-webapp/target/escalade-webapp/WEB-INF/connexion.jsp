@@ -18,10 +18,10 @@
         </div>
         <ul class="nav navbar-nav col-lg-6">
             <li>
-                <a href="index.jsp">Rechercher</a>
+                <a href="../index.jsp">Rechercher</a>
             </li>
             <li>
-                <a href="WEB-INF/connexion.jsp">Log in/ Sign up</a>
+                <a href="connexion.jsp">Log in/ Sign up</a>
             </li>
         </ul>
     </div>
