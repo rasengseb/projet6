@@ -21,7 +21,7 @@
                 <a href="index.jsp">Rechercher</a>
             </li>
             <li>
-                <a href="WEB-INF/connexion.jsp">Log in/ Sign up</a>
+                <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
             </li>
         </ul>
     </div>

@@ -30,7 +30,7 @@
 <%--Corps de la page web--%>
 <div class="row">
     <div class="col-lg-6">
-        <form method="post" action="${pageContext.request.contextPath}/authentication">
+        <form method="post" action="${pageContext.request.contextPath}/authentification">
             <fieldset>
                 <legend>S'inscrire</legend>
                 <label for="ipseudo">Pseudo : </label> <input type="text" name="ipseudo" id="ipseudo">
@@ -43,7 +43,7 @@
         </form>
     </div>
     <div class="col-lg-6">
-        <form method="post" action="${pageContext.request.contextPath}/authentication">
+        <form method="post" action="${pageContext.request.contextPath}/authentification">
             <fieldset>
                 <legend>Se Connecter</legend>
                 <label for="cpseudo">Pseudo : </label> <input type="text" name="cpseudo" id="cpseudo"/>
