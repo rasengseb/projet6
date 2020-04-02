@@ -11,7 +11,7 @@ import java.util.List;
 public class UtilisateurResource extends AbstractResource {
 
 
-    public Utilisateur connexion (String pseudo, String mdp){
+    public Utilisateur getConnexion (String pseudo, String mdp){
         Utilisateur utilisateur = getManagerFactory().getUtilisateurManager().connexion(pseudo, mdp);
         return utilisateur;
     }

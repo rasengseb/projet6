@@ -2,6 +2,7 @@ package org.example.servlet;
 
 import org.example.bean.Utilisateur;
 import org.example.rest.resource.ResourceFactory;
+import org.example.rest.resource.projectResource.UtilisateurResource;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -14,8 +15,7 @@ import java.io.IOException;
 @WebServlet("/Authentication")
 public class Authentication extends HttpServlet {
 
-    @Inject
-    private ResourceFactory resourceFactory;
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -34,7 +34,8 @@ public class Authentication extends HttpServlet {
         System.out.println("doPost");
         System.out.println(request.getParameter("cpseudo") + " - " + request.getParameter("cmdp"));
 
-        Utilisateur utilisateur = resourceFactory.getUtilisateurResource().connexion(request.getParameter("cpseudo"), request.getParameter("cString"));
+        UtilisateurResource utilisateurResource = new UtilisateurResource();
+        Utilisateur utilisateur = utilisateurResource.getConnexion(request.getParameter("cpseudo"), request.getParameter("cString"));
         System.out.println("Connexion Réussi");
         System.out.println(utilisateur.toString());
 
