@@ -1,7 +1,6 @@
 package org.example.servlet;
 
 import org.example.bean.Utilisateur;
-import org.example.rest.resource.ResourceFactory;
 import org.example.rest.resource.projectResource.UtilisateurResource;
 
 import javax.inject.Inject;
@@ -35,7 +34,7 @@ public class Authentication extends HttpServlet {
         System.out.println(request.getParameter("cpseudo") + " - " + request.getParameter("cmdp"));
 
         UtilisateurResource utilisateurResource = new UtilisateurResource();
-        Utilisateur utilisateur = utilisateurResource.getConnexion(request.getParameter("cpseudo"), request.getParameter("cString"));
+        Utilisateur utilisateur = utilisateurResource.getConnexion(request.getParameter("cpseudo"), request.getParameter("cmdp"));
         System.out.println("Connexion Réussi");
         System.out.println(utilisateur.toString());
 
