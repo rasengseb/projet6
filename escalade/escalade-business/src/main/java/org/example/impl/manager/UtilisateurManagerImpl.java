@@ -14,7 +14,7 @@ public class UtilisateurManagerImpl extends AbstractManager implements Utilisate
 
     @Override
     public Utilisateur connexion(String pseudo, String mdp) {
-        Utilisateur utilisateur = getDaoFactory().getUtilisateurDao().connexion(pseudo,mdp);
+        Utilisateur utilisateur = getDaoFactory().getUtilisateurDao().connexion(pseudo, mdp);
 
         return utilisateur;
     }
