@@ -1,10 +1,8 @@
 package org.example.servlet;
 
 import org.example.bean.Utilisateur;
-import org.example.rest.resource.ResourceFactory;
 import org.example.rest.resource.projectResource.UtilisateurResource;
 
-import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +12,6 @@ import java.io.IOException;
 
 @WebServlet("/Authentication")
 public class Authentication extends HttpServlet {
-
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,12 +29,21 @@ public class Authentication extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         System.out.println("doPost");
-        System.out.println(request.getParameter("cpseudo") + " - " + request.getParameter("cmdp"));
 
-        UtilisateurResource utilisateurResource = new UtilisateurResource();
-        Utilisateur utilisateur = utilisateurResource.getConnexion(request.getParameter("cpseudo"), request.getParameter("cString"));
-        System.out.println("Connexion Réussi");
-        System.out.println(utilisateur.toString());
+        if (request.getParameter("inscrire") != null) {
+            System.out.println("INSCRIPTION");
+            UtilisateurResource utilisateurResource = new UtilisateurResource();
+            Utilisateur utilisateur = utilisateurResource.addUtilisateur(request.getParameter("ipseudo"), request.getParameter("imdp"), request.getParameter("inom"), request.getParameter("ipernom"), request.getParameter("imail"), false);
+            System.out.println(utilisateur.toString());
+        }
+
+        if (request.getParameter("connection") != null) {
+            System.out.println("CONNECTION");
+            UtilisateurResource utilisateurResource = new UtilisateurResource();
+            Utilisateur utilisateur = utilisateurResource.getConnexion(request.getParameter("cpseudo"), request.getParameter("cString"));
+            System.out.println(utilisateur.toString());
+        }
+
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/connexion.jsp").forward(request, response);
     }

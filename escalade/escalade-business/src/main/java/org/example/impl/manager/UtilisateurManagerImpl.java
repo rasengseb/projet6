@@ -18,4 +18,10 @@ public class UtilisateurManagerImpl extends AbstractManager implements Utilisate
 
         return utilisateur;
     }
+
+    @Override
+    public Utilisateur addUtilisateur(String pseudo, String mdp, String nom, String prenom, String mail, boolean isAdmin) {
+        Utilisateur utilisateur = getDaoFactory().getUtilisateurDao().addUtilisateur(pseudo, mdp, nom, prenom, mail, isAdmin);
+        return utilisateur;
+    }
 }

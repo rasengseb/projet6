@@ -6,6 +6,6 @@ public interface UtilisateurDao {
 
     Utilisateur connexion (String pseudo, String mdp);
 
-    void inscription (Utilisateur utilisateur);
+    Utilisateur addUtilisateur (String pseudo, String mdp, String nom, String prenom, String mail, boolean idAdmin);
 
 }

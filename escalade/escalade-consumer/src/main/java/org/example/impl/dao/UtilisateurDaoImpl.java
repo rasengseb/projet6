@@ -28,7 +28,15 @@ public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
     }
 
     @Override
-    public void inscription(Utilisateur utilisateur) {
+    public Utilisateur addUtilisateur(String pseudo, String mdp, String nom, String prenom, String mail, boolean idAdmin) {
+        String vSQL ="INSERT INTO utilisateur (nom, prenom, pseudo, mdp, mail, isadmin) VALUES ('" + nom + "', '" + prenom +"', '" + pseudo + "', '" + mdp + "', '" + mail + "', '" + mail + "')";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSource());
+        List<Utilisateur> listUtilisateur = jdbcTemplate.query(vSQL, utilisateurRM);
+        Utilisateur utilisateur = listUtilisateur.get(0);
+
+        return utilisateur;
 
     }
+
+
 }
