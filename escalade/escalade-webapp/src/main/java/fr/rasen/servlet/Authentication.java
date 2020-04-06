@@ -40,7 +40,7 @@ public class Authentication extends HttpServlet {
         if (request.getParameter("connection") != null) {
             System.out.println("CONNECTION");
             UtilisateurResource utilisateurResource = new UtilisateurResource();
-            Utilisateur utilisateur = utilisateurResource.getConnexion(request.getParameter("cpseudo"), request.getParameter("cString"));
+            Utilisateur utilisateur = utilisateurResource.getConnexion(request.getParameter("cpseudo"), request.getParameter("cmdp"));
             System.out.println(utilisateur.toString());
         }
 
