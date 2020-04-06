@@ -1,6 +1,6 @@
-package org.example.impl.dao;
+package fr.rasen.impl.dao;
 
-import org.example.contract.dao.RegionDao;
+import fr.rasen.contract.dao.RegionDao;
 
 public class RegionDaoImpl extends AbstractDao implements RegionDao {
 }

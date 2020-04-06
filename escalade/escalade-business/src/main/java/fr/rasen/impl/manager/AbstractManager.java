@@ -1,6 +1,6 @@
-package org.example.impl.manager;
+package fr.rasen.impl.manager;
 
-import org.example.contract.DaoFactory;
+import fr.rasen.contract.DaoFactory;
 
 public abstract class AbstractManager {
 

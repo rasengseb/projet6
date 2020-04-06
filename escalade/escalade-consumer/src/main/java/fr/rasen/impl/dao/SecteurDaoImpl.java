@@ -1,6 +1,6 @@
-package org.example.impl.dao;
+package fr.rasen.impl.dao;
 
-import org.example.contract.dao.SecteurDao;
+import fr.rasen.contract.dao.SecteurDao;
 
 public class SecteurDaoImpl extends AbstractDao implements SecteurDao {
 }

@@ -1,6 +1,6 @@
-package org.example.contract.dao;
+package fr.rasen.contract.dao;
 
-import org.example.bean.Utilisateur;
+import fr.rasen.bean.Utilisateur;
 
 public interface UtilisateurDao {
 

@@ -1,4 +1,4 @@
-package org.example.impl.dao;
+package fr.rasen.impl.dao;
 
 import javax.inject.Inject;
 import javax.inject.Named;

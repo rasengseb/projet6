@@ -1,6 +1,6 @@
-package org.example.impl.rowMapper;
+package fr.rasen.impl.rowMapper;
 
-import org.example.bean.Utilisateur;
+import fr.rasen.bean.Utilisateur;
 import org.springframework.jdbc.core.RowMapper;
 
 import javax.inject.Named;

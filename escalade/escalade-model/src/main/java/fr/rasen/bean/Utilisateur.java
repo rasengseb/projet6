@@ -1,4 +1,4 @@
-package org.example.bean;
+package fr.rasen.bean;
 
 public class Utilisateur {
     private int id;

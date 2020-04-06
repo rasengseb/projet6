@@ -1,6 +1,6 @@
-package org.example.contract;
+package fr.rasen.contract;
 
-import org.example.contract.manager.UtilisateurManager;
+import fr.rasen.contract.manager.UtilisateurManager;
 
 public interface ManagerFactory {
 

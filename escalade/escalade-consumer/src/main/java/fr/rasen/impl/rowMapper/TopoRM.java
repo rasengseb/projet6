@@ -1,6 +1,6 @@
-package org.example.impl.rowMapper;
+package fr.rasen.impl.rowMapper;
 
-import org.example.bean.Topo;
+import fr.rasen.bean.Topo;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

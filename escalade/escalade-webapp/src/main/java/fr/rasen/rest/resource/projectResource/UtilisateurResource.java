@@ -1,11 +1,9 @@
-package org.example.rest.resource.projectResource;
+package fr.rasen.rest.resource.projectResource;
 
-import org.example.bean.Utilisateur;
-import org.example.exception.NotFoundException;
-import org.example.rest.resource.AbstractResource;
+import fr.rasen.bean.Utilisateur;
+import fr.rasen.rest.resource.AbstractResource;
 
 import javax.inject.Named;
-import java.util.List;
 
 @Named
 public class UtilisateurResource extends AbstractResource {

@@ -1,4 +1,4 @@
-package org.example.exception;
+package fr.rasen.exception;
 
 public class NotFoundException extends Exception {
 

@@ -1,12 +1,9 @@
-package org.example.impl.manager;
+package fr.rasen.impl.manager;
 
-import org.example.contract.manager.UtilisateurManager;
-import org.example.bean.Utilisateur;
-import org.example.exception.NotFoundException;
+import fr.rasen.contract.manager.UtilisateurManager;
+import fr.rasen.bean.Utilisateur;
 
 import javax.inject.Named;
-import javax.rmi.CORBA.Util;
-import java.util.List;
 
 @Named
 public class UtilisateurManagerImpl extends AbstractManager implements UtilisateurManager {

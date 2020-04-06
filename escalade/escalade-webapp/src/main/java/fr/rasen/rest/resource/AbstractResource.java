@@ -1,6 +1,6 @@
-package org.example.rest.resource;
+package fr.rasen.rest.resource;
 
-import org.example.contract.ManagerFactory;
+import fr.rasen.contract.ManagerFactory;
 
 public abstract class AbstractResource {
 

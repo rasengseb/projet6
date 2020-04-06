@@ -1,6 +1,6 @@
-package org.example.impl.dao;
+package fr.rasen.impl.dao;
 
-import org.example.contract.dao.CotationDao;
+import fr.rasen.contract.dao.CotationDao;
 
 public class CotationDaoImpl extends AbstractDao implements CotationDao {
 }

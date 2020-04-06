@@ -1,6 +1,6 @@
-package org.example.impl.dao;
+package fr.rasen.impl.dao;
 
-import org.example.contract.dao.TopoDao;
+import fr.rasen.contract.dao.TopoDao;
 
 public class TopoDaoImpl extends AbstractDao implements TopoDao {
 }

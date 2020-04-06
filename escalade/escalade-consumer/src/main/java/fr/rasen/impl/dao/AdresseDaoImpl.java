@@ -1,6 +1,6 @@
-package org.example.impl.dao;
+package fr.rasen.impl.dao;
 
-import org.example.contract.dao.AdresseDao;
+import fr.rasen.contract.dao.AdresseDao;
 
 public class AdresseDaoImpl extends AbstractDao implements AdresseDao {
 }

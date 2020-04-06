@@ -1,6 +1,6 @@
-package org.example.contract;
+package fr.rasen.contract;
 
-import org.example.contract.dao.UtilisateurDao;
+import fr.rasen.contract.dao.UtilisateurDao;
 
 public interface DaoFactory {
 

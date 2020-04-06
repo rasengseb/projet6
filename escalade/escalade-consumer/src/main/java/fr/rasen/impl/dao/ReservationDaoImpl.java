@@ -1,6 +1,6 @@
-package org.example.impl.dao;
+package fr.rasen.impl.dao;
 
-import org.example.contract.dao.ReservationDao;
+import fr.rasen.contract.dao.ReservationDao;
 
 public class ReservationDaoImpl extends AbstractDao implements ReservationDao {
 }

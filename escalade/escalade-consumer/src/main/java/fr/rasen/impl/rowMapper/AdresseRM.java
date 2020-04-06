@@ -1,6 +1,6 @@
-package org.example.impl.rowMapper;
+package fr.rasen.impl.rowMapper;
 
-import org.example.bean.Adresse;
+import fr.rasen.bean.Adresse;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

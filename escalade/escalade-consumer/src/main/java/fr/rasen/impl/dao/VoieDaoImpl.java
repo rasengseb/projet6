@@ -1,6 +1,6 @@
-package org.example.impl.dao;
+package fr.rasen.impl.dao;
 
-import org.example.contract.dao.VoieDao;
+import fr.rasen.contract.dao.VoieDao;
 
 public class VoieDaoImpl extends AbstractDao implements VoieDao {
 }

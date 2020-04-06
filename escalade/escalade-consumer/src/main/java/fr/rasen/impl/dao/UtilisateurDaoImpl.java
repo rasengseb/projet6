@@ -1,8 +1,8 @@
-package org.example.impl.dao;
+package fr.rasen.impl.dao;
 
-import org.example.bean.Utilisateur;
-import org.example.contract.dao.UtilisateurDao;
-import org.example.impl.rowMapper.UtilisateurRM;
+import fr.rasen.bean.Utilisateur;
+import fr.rasen.contract.dao.UtilisateurDao;
+import fr.rasen.impl.rowMapper.UtilisateurRM;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.inject.Inject;

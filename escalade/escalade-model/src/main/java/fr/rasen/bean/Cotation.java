@@ -1,4 +1,4 @@
-package org.example.bean;
+package fr.rasen.bean;
 
 public class Cotation {
     private int id;

@@ -1,4 +1,4 @@
-package org.example.bean;
+package fr.rasen.bean;
 
 import java.util.List;
 

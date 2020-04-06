@@ -1,7 +1,7 @@
-package org.example.impl;
+package fr.rasen.impl;
 
-import org.example.contract.DaoFactory;
-import org.example.contract.dao.UtilisateurDao;
+import fr.rasen.contract.DaoFactory;
+import fr.rasen.contract.dao.UtilisateurDao;
 
 import javax.inject.Inject;
 import javax.inject.Named;

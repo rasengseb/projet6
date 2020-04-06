@@ -1,7 +1,7 @@
-package org.example.impl;
+package fr.rasen.impl;
 
-import org.example.contract.ManagerFactory;
-import org.example.contract.manager.UtilisateurManager;
+import fr.rasen.contract.manager.UtilisateurManager;
+import fr.rasen.contract.ManagerFactory;
 
 import javax.inject.Inject;
 import javax.inject.Named;

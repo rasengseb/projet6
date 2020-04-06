@@ -1,11 +1,6 @@
-package org.example.contract.manager;
+package fr.rasen.contract.manager;
 
-import org.example.bean.Utilisateur;
-import org.example.exception.NotFoundException;
-
-import javax.rmi.CORBA.Util;
-import javax.swing.*;
-import java.util.List;
+import fr.rasen.bean.Utilisateur;
 
 public interface UtilisateurManager {
 

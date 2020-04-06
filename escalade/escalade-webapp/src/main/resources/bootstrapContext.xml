@@ -9,7 +9,7 @@
             http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Inclusion d'autres fichiers de contexte Spring -->
-    <import resource="classpath:/org/example/consumer/consumerContext.xml" />
-    <import resource="classpath:/org/example/business/businessContext.xml" />
+    <import resource="classpath:/fr/example/consumer/consumerContext.xml" />
+    <import resource="classpath:/fr/example/business/businessContext.xml" />
     <import resource="classpath:/org/example/webapp/webappContext.xml" />
 </beans>

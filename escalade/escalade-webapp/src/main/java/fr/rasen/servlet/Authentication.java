@@ -1,7 +1,7 @@
-package org.example.servlet;
+package fr.rasen.servlet;
 
-import org.example.bean.Utilisateur;
-import org.example.rest.resource.projectResource.UtilisateurResource;
+import fr.rasen.rest.resource.projectResource.UtilisateurResource;
+import fr.rasen.bean.Utilisateur;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,7 +30,6 @@ public class Authentication extends HttpServlet {
 
         System.out.println("doPost");
 
-<<<<<<< HEAD
         if (request.getParameter("inscrire") != null) {
             System.out.println("INSCRIPTION");
             UtilisateurResource utilisateurResource = new UtilisateurResource();
@@ -45,12 +44,6 @@ public class Authentication extends HttpServlet {
             System.out.println(utilisateur.toString());
         }
 
-=======
-        UtilisateurResource utilisateurResource = new UtilisateurResource();
-        Utilisateur utilisateur = utilisateurResource.getConnexion(request.getParameter("cpseudo"), request.getParameter("cmdp"));
-        System.out.println("Connexion Réussi");
-        System.out.println(utilisateur.toString());
->>>>>>> ab46c1ced7279d302607e3d18b3d3099526c21fc
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/connexion.jsp").forward(request, response);
     }
