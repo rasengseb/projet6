@@ -11,63 +11,72 @@
 </head>
 
 <body>
-<div class="row">
-    <div class="navbar navbar-default">
-        <div class="navbar-header col-lg-6">
-            <h1 class="navbar-brand" href="#">Les Amis de l'escalade</h1>
-        </div>
-        <ul class="nav navbar-nav col-lg-6">
-            <li>
-                <a href="../index.jsp">Rechercher</a>
-            </li>
-            <li>
-                <a href="connexion.jsp">Log in/ Sign up</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<%--Corps de la page web--%>
-<div class="row">
-    <div class="col-lg-6">
-        <form method="post" action="${pageContext.request.contextPath}/authentification">
-            <fieldset>
-                <legend>S'inscrire</legend>
-                <label for="ipseudo">Pseudo : </label> <input type="text" name="ipseudo" id="ipseudo">
-                <label for="imdp">Mot de passe : </label> <input type="password" name="imdp" id="imdp">
-                <label for="inom">Nom : </label> <input type="text" name="inom" id="inom">
-                <label for="iprenom">Prénom : </label> <input type="text" name="iprenom" id="iprenom">
-                <label for="imail">Mail : </label> <input type="email" name="imail" id="imail">
-                <input type="submit" value="S'inscrire" name="inscrire" id="inscrire">
-            </fieldset>
-        </form>
-    </div>
-    <div class="col-lg-6">
-        <form method="post" action="${pageContext.request.contextPath}/authentification">
-            <fieldset>
-                <legend>Se Connecter</legend>
-                <label for="cpseudo">Pseudo : </label> <input type="text" name="cpseudo" id="cpseudo"/>
-                <label for="cmdp"> Mot de Passe : </label> <input type="password" name="cmdp" id="cmdp"/>
-                <input type="submit" value="Connection" name="connection" id="connection">
-            </fieldset>
-        </form>
-    </div>
-</div>
-
-<footer>
+<div class="container">
     <div class="row">
-        <div class="btn-toolbar col-lg-offset-3 col-lg-6">
-            <div class="btn-group">
-                <button class="btn btn-primary btn-sm">Instagram</button>
-                <button class="btn btn-primary btn-sm">Facebook</button>
-                <button class="btn btn-primary btn-sm">Twitter</button>
-                <button class="btn btn-primary btn-sm">Google +</button>
-                <button class="btn btn-primary btn-sm">Nous Contacter</button>
+        <div class="navbar navbar-default">
+            <div class="col-lg-6">
+                <h1 href="#">Les Amis de l'escalade</h1>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-offset-2 col-lg-3">
+                        <a href="">Rechercher</a>
+                    </div>
+                    <div class="col-lg-offset-2 col-lg-3">
+                        <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
-</footer>
+
+    <%--Corps de la page web--%>
+    <div class="row">
+        <div class="col-lg-6">
+            <form method="post" action="${pageContext.request.contextPath}/authentification">
+                <fieldset>
+                    <legend>S'inscrire</legend>
+                    <label for="ipseudo">Pseudo : </label> <input type="text" name="ipseudo" id="ipseudo">
+                    <label for="imdp">Mot de passe : </label> <input type="password" name="imdp" id="imdp">
+                    <label for="inom">Nom : </label> <input type="text" name="inom" id="inom">
+                    <label for="iprenom">Prénom : </label> <input type="text" name="iprenom" id="iprenom">
+                    <label for="imail">Mail : </label> <input type="email" name="imail" id="imail">
+                    <input type="submit" value="S'inscrire" name="inscrire" id="inscrire">
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <form method="post" action="${pageContext.request.contextPath}/authentification">
+                <fieldset>
+                    <legend>Se Connecter</legend>
+                    <label for="cpseudo">Pseudo : </label> <input type="text" name="cpseudo" id="cpseudo"/>
+                    <label for="cmdp"> Mot de Passe : </label> <input type="password" name="cmdp" id="cmdp"/>
+                    <input type="submit" value="Connection" name="connection" id="connection">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-3">
+                <div class="col-lg-offset-1 col-lg-2">
+                    <button class="btn btn-primary" type="submit">Facebook</button>
+                </div>
+                <div class="col-lg-offset-1 col-lg-2">
+                    <button class="btn btn-primary" type="submit">Twitter</button>
+                </div>
+                <div class="col-lg-offset-1 col-lg-2">
+                    <button class="btn btn-primary" type="submit">Instagram</button>
+                </div>
+            </div>
+            <div class="col-lg-offset-2 col-lg-3">
+                <a href="#">Nous Contacter</a>
+            </div>
+        </div>
+    </footer>
+</div>
 
 </body>
 </html>

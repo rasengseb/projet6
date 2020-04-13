@@ -10,7 +10,7 @@
 
     <!-- ==== AbstractResource ===== -->
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-        <property name="targetClass" value="fr.rasen.rest.resource.AbstractResource" />
+        <property name="targetClass" value="fr.rasen.webapp.rest.resource.AbstractResource" />
         <property name="targetMethod" value="setManagerFactory" />
         <property name="arguments" ref="managerFactory" />
     </bean>

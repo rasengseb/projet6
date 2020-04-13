@@ -11,39 +11,47 @@
 </head>
 
 <body>
-<div class="row">
-    <div class="navbar navbar-default">
-        <div class="navbar-header col-lg-6">
-            <h1 class="navbar-brand" href="#">Les Amis de l'escalade</h1>
-        </div>
-        <ul class="nav navbar-nav col-lg-6">
-            <li>
-                <a href="index.jsp">Rechercher</a>
-            </li>
-            <li>
-                <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<%--Corps de la page web--%>
-
-
-<footer>
+<div class="container">
     <div class="row">
-        <div class="btn-toolbar col-lg-offset-3 col-lg-6">
-            <div class="btn-group">
-                <button class="btn btn-primary btn-sm">Instagram</button>
-                <button class="btn btn-primary btn-sm">Facebook</button>
-                <button class="btn btn-primary btn-sm">Twitter</button>
-                <button class="btn btn-primary btn-sm">Google +</button>
-                <button class="btn btn-primary btn-sm">Nous Contacter</button>
+        <div class="navbar navbar-default">
+            <div class="col-lg-6">
+                <h1 href="#">Les Amis de l'escalade</h1>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-offset-2 col-lg-3">
+                        <a href="">Rechercher</a>
+                    </div>
+                    <div class="col-lg-offset-2 col-lg-3">
+                        <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
-</footer>
+
+    <%--Corps de la page web--%>
+
+
+    <footer>
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-3">
+                <div class="col-lg-offset-1 col-lg-2">
+                    <button class="btn btn-primary" type="submit">Facebook</button>
+                </div>
+                <div class="col-lg-offset-1 col-lg-2">
+                    <button class="btn btn-primary" type="submit">Twitter</button>
+                </div>
+                <div class="col-lg-offset-1 col-lg-2">
+                    <button class="btn btn-primary" type="submit">Instagram</button>
+                </div>
+            </div>
+            <div class="col-lg-offset-2 col-lg-3">
+                <a href="#">Nous Contacter</a>
+            </div>
+        </div>
+    </footer>
+</div>
 
 </body>
 </html>

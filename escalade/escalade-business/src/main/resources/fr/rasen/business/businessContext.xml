@@ -38,7 +38,7 @@
     <!-- ==== AbstractResource ===== -->
 
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-        <property name="targetClass" value="fr.rasen.impl.manager.AbstractManager" />
+        <property name="targetClass" value="fr.rasen.business.impl.manager.AbstractManager" />
         <property name="targetMethod" value="setDaoFactory" />
         <property name="arguments" ref="daoFactory" />
     </bean>
