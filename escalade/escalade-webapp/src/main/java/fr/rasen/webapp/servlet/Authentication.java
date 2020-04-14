@@ -34,10 +34,10 @@ public class Authentication extends HttpServlet {
             System.out.println("INSCRIPTION");
             UtilisateurResource utilisateurResource = new UtilisateurResource();
             Utilisateur utilisateur = new Utilisateur(
-                    request.getParameter("ipseudo"),
-                    request.getParameter("imdp"),
                     request.getParameter("inom"),
                     request.getParameter("iprenom"),
+                    request.getParameter("ipseudo"),
+                    request.getParameter("imdp"),
                     request.getParameter("imail"),
                     false
             );
