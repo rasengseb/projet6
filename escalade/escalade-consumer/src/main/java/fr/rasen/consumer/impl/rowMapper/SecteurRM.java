@@ -1,6 +1,6 @@
 package fr.rasen.consumer.impl.rowMapper;
 
-import fr.rasen.model.bean.Secteur;
+import fr.rasen.model.bean.bdd.Secteur;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

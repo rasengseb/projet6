@@ -1,7 +1,8 @@
 package fr.rasen.business.impl.manager;
 
 import fr.rasen.business.contract.manager.UtilisateurManager;
-import fr.rasen.model.bean.Utilisateur;
+import fr.rasen.model.bean.bdd.Utilisateur;
+import fr.rasen.model.bean.ressource.UtilisateurProperties;
 
 import javax.inject.Named;
 
@@ -11,14 +12,16 @@ public class UtilisateurManagerImpl extends AbstractManager implements Utilisate
 
     @Override
     public Utilisateur connexion(String pseudo, String mdp) {
-        Utilisateur utilisateur = getDaoFactory().getUtilisateurDao().connexion(pseudo, mdp);
-
-        return utilisateur;
+        return getDaoFactory().getUtilisateurDao().connexion(pseudo, mdp);
     }
 
     @Override
     public boolean addUtilisateur(Utilisateur utilisateur) {
-        boolean checkInsert = getDaoFactory().getUtilisateurDao().addUtilisateur(utilisateur);
-        return checkInsert;
+        return getDaoFactory().getUtilisateurDao().addUtilisateur(utilisateur);
+    }
+
+    @Override
+    public UtilisateurProperties getProfile() {
+        return new UtilisateurProperties();
     }
 }

@@ -1,6 +1,6 @@
 package fr.rasen.consumer.impl.dao;
 
-import fr.rasen.model.bean.Utilisateur;
+import fr.rasen.model.bean.bdd.Utilisateur;
 import fr.rasen.consumer.contract.dao.UtilisateurDao;
 import fr.rasen.consumer.impl.rowMapper.UtilisateurRM;
 import org.springframework.jdbc.core.JdbcTemplate;

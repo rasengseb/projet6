@@ -1,7 +1,7 @@
 package fr.rasen.webapp.servlet;
 
 import fr.rasen.webapp.rest.resource.projectResource.UtilisateurResource;
-import fr.rasen.model.bean.Utilisateur;
+import fr.rasen.model.bean.bdd.Utilisateur;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

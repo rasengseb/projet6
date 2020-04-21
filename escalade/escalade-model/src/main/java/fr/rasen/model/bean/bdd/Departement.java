@@ -1,4 +1,4 @@
-package fr.rasen.model.bean;
+package fr.rasen.model.bean.bdd;
 
 public class Departement {
     private int id;

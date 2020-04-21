@@ -37,4 +37,13 @@
         <url-pattern>/authentification</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Profile</servlet-name>
+        <servlet-class>fr.rasen.webapp.servlet.Profile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+
 </web-app>

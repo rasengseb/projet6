@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<div class="container">
+
     <div class="row">
         <div class="navbar navbar-default">
             <div class="col-lg-6">
@@ -51,7 +51,7 @@
             </div>
         </div>
     </footer>
-</div>
+
 
 </body>
 </html>
