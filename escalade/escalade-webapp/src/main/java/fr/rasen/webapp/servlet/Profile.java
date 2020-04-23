@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/profile")
+@WebServlet("/Profile")
 public class Profile extends HttpServlet {
 
     @Inject
