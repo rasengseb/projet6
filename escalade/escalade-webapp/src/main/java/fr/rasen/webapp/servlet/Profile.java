@@ -2,8 +2,10 @@ package fr.rasen.webapp.servlet;
 
 import fr.rasen.webapp.bean.Session;
 import fr.rasen.webapp.rest.resource.projectResource.UtilisateurResource;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.inject.Inject;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +17,14 @@ import java.io.IOException;
 public class Profile extends HttpServlet {
 
     @Inject
-    Session session;
+    private Session session;
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        //-- Permettre dans le contexte d'une servlet de se lier au contexte Spring.
+        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
+    }
 
     UtilisateurResource utilisateurResource = new UtilisateurResource();
 
@@ -23,7 +32,7 @@ public class Profile extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-       // System.out.println(session.toString());
+        System.out.println(session.toString());
 
         request.setAttribute("profile", utilisateurResource.getProfile());
         this.getServletContext().getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);;

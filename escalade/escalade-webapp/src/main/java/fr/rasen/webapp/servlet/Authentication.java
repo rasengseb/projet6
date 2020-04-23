@@ -3,8 +3,10 @@ package fr.rasen.webapp.servlet;
 import fr.rasen.webapp.bean.Session;
 import fr.rasen.webapp.rest.resource.projectResource.UtilisateurResource;
 import fr.rasen.model.bean.bdd.Utilisateur;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.inject.Inject;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,11 +20,18 @@ public class Authentication extends HttpServlet {
     @Inject
     Session session;
 
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        //-- Permettre dans le contexte d'une servlet de se lier au contexte Spring.
+        SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
+    }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-       // System.out.println(session.toString());
+       System.out.println(session.toString());
 
         System.out.println("doGet");
         System.out.println(request.getParameter("cpseudo") + " - " + request.getParameter("cmdp"));
