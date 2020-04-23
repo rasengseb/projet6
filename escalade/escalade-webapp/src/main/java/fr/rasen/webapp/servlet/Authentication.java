@@ -1,8 +1,10 @@
 package fr.rasen.webapp.servlet;
 
+import fr.rasen.webapp.bean.Session;
 import fr.rasen.webapp.rest.resource.projectResource.UtilisateurResource;
 import fr.rasen.model.bean.bdd.Utilisateur;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,10 +15,14 @@ import java.io.IOException;
 @WebServlet("/Authentication")
 public class Authentication extends HttpServlet {
 
+    @Inject
+    Session session;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
+       // System.out.println(session.toString());
 
         System.out.println("doGet");
         System.out.println(request.getParameter("cpseudo") + " - " + request.getParameter("cmdp"));

@@ -10,9 +10,9 @@
 
     <!-- ==== AbstractResource ===== -->
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-        <property name="targetClass" value="fr.rasen.webapp.rest.resource.AbstractResource" />
-        <property name="targetMethod" value="setManagerFactory" />
-        <property name="arguments" ref="managerFactory" />
+        <property name="targetClass" value="fr.rasen.webapp.rest.resource.AbstractResource"/>
+        <property name="targetMethod" value="setManagerFactory"/>
+        <property name="arguments" ref="managerFactory"/>
     </bean>
 
     <bean id="dataSourceEscalade" class="org.springframework.jndi.JndiObjectFactoryBean">
@@ -22,11 +22,7 @@
     <!-- ===== Fonctionnement avec les annotations ===== -->
 
     <!-- Prend en compte la configuration des injections (@Inject...) -->
-    <!--
-        <context:annotation-config/>
-    -->
+    <context:annotation-config/>
     <!-- Scanne les packages pour trouver les beans qui se déclarent (@Named...) -->
-    <!--
-        <context:component-scan base-package="org.example.demo.ticket"/>
-    -->
+    <context:component-scan base-package="fr.rasen.webapp"/>
 </beans>
