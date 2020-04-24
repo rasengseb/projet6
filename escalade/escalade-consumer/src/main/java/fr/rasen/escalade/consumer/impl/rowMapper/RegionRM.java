@@ -1,6 +1,6 @@
 package fr.rasen.escalade.consumer.impl.rowMapper;
 
-import fr.rasen.escalade.model.bean.bdd.Region;
+import fr.rasen.escalade.model.bean.Region;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

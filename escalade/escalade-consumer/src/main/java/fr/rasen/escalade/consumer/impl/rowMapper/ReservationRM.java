@@ -1,6 +1,6 @@
 package fr.rasen.escalade.consumer.impl.rowMapper;
 
-import fr.rasen.escalade.model.bean.bdd.Reservation;
+import fr.rasen.escalade.model.bean.Reservation;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

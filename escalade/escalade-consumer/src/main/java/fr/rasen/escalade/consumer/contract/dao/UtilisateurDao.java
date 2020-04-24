@@ -1,6 +1,6 @@
 package fr.rasen.escalade.consumer.contract.dao;
 
-import fr.rasen.escalade.model.bean.bdd.Utilisateur;
+import fr.rasen.escalade.model.bean.Utilisateur;
 
 public interface UtilisateurDao {
 

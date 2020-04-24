@@ -1,7 +1,7 @@
 package fr.rasen.escalade.business.impl.manager;
 
 import fr.rasen.escalade.business.contract.manager.UtilisateurManager;
-import fr.rasen.escalade.model.bean.bdd.Utilisateur;
+import fr.rasen.escalade.model.bean.Utilisateur;
 import fr.rasen.escalade.model.bean.ressource.UtilisateurProperties;
 
 import javax.inject.Named;
@@ -20,8 +20,4 @@ public class UtilisateurManagerImpl extends AbstractManager implements Utilisate
         return getDaoFactory().getUtilisateurDao().addUtilisateur(utilisateur);
     }
 
-    @Override
-    public UtilisateurProperties getProfile() {
-        return new UtilisateurProperties();
-    }
 }

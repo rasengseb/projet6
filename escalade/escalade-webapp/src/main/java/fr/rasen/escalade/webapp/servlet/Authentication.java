@@ -2,7 +2,7 @@ package fr.rasen.escalade.webapp.servlet;
 
 import fr.rasen.escalade.webapp.bean.Session;
 import fr.rasen.escalade.webapp.resource.projectResource.UtilisateurResource;
-import fr.rasen.escalade.model.bean.bdd.Utilisateur;
+import fr.rasen.escalade.model.bean.Utilisateur;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.inject.Inject;

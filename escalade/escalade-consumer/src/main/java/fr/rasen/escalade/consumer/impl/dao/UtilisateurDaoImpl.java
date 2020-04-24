@@ -1,6 +1,6 @@
 package fr.rasen.escalade.consumer.impl.dao;
 
-import fr.rasen.escalade.model.bean.bdd.Utilisateur;
+import fr.rasen.escalade.model.bean.Utilisateur;
 import fr.rasen.escalade.consumer.contract.dao.UtilisateurDao;
 import fr.rasen.escalade.consumer.impl.rowMapper.UtilisateurRM;
 import org.springframework.jdbc.core.JdbcTemplate;

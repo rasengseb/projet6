@@ -1,6 +1,6 @@
 package fr.rasen.escalade.consumer.impl.rowMapper;
 
-import fr.rasen.escalade.model.bean.bdd.Utilisateur;
+import fr.rasen.escalade.model.bean.Utilisateur;
 import org.springframework.jdbc.core.RowMapper;
 
 import javax.inject.Named;

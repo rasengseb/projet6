@@ -1,4 +1,4 @@
-package fr.rasen.escalade.model.bean.bdd;
+package fr.rasen.escalade.model.bean;
 
 import java.util.List;
 

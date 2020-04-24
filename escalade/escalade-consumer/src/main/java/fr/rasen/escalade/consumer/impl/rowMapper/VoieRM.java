@@ -1,6 +1,6 @@
 package fr.rasen.escalade.consumer.impl.rowMapper;
 
-import fr.rasen.escalade.model.bean.bdd.Voie;
+import fr.rasen.escalade.model.bean.Voie;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

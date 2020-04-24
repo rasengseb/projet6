@@ -26,15 +26,12 @@ public class Profile extends HttpServlet {
         SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
 
-    UtilisateurResource utilisateurResource = new UtilisateurResource();
-
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
         System.out.println(session.toString());
 
-        request.setAttribute("profile", utilisateurResource.getProfile());
         this.getServletContext().getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);;
     }
 

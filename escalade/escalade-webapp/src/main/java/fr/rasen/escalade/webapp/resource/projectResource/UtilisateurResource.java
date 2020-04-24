@@ -1,6 +1,6 @@
 package fr.rasen.escalade.webapp.resource.projectResource;
 
-import fr.rasen.escalade.model.bean.bdd.Utilisateur;
+import fr.rasen.escalade.model.bean.Utilisateur;
 import fr.rasen.escalade.model.bean.ressource.UtilisateurProperties;
 import fr.rasen.escalade.webapp.resource.AbstractResource;
 
@@ -18,8 +18,5 @@ public class UtilisateurResource extends AbstractResource {
         return getManagerFactory().getUtilisateurManager().addUtilisateur(utilisateur);
     }
 
-    public UtilisateurProperties getProfile(){
-        return getManagerFactory().getUtilisateurManager().getProfile();
-    }
 
 }
