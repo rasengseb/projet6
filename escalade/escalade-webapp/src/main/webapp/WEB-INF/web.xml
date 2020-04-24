@@ -30,7 +30,7 @@
 
     <servlet>
         <servlet-name>Authentication</servlet-name>
-        <servlet-class>fr.rasen.webapp.servlet.Authentication</servlet-class>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.Authentication</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Authentication</servlet-name>
@@ -39,7 +39,7 @@
 
     <servlet>
         <servlet-name>Profile</servlet-name>
-        <servlet-class>fr.rasen.webapp.servlet.Profile</servlet-class>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.Profile</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Profile</servlet-name>
