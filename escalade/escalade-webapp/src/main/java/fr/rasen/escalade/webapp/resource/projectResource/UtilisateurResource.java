@@ -1,7 +1,6 @@
 package fr.rasen.escalade.webapp.resource.projectResource;
 
 import fr.rasen.escalade.model.bean.Utilisateur;
-import fr.rasen.escalade.model.bean.ressource.UtilisateurProperties;
 import fr.rasen.escalade.webapp.resource.AbstractResource;
 
 import javax.inject.Named;

@@ -15,7 +15,7 @@
 <div class="row">
     <div class="navbar navbar-default">
         <div class="col-lg-6">
-            <h1 href="#">Les Amis de l'escalade</h1>
+            <h1 href="">Les Amis de l'escalade</h1>
         </div>
         <div class="col-lg-6">
             <div class="row">
@@ -35,25 +35,47 @@
     <div class="row">
         <div class="col-lg-6">
             <form method="post" action="${pageContext.request.contextPath}/authentification">
-                <fieldset>
-                    <legend>S'inscrire</legend>
-                    <label for="ipseudo">Pseudo : </label> <input type="text" name="ipseudo" id="ipseudo">
-                    <label for="imdp">Mot de passe : </label> <input type="password" name="imdp" id="imdp">
-                    <label for="inom">Nom : </label> <input type="text" name="inom" id="inom">
-                    <label for="iprenom">Prénom : </label> <input type="text" name="iprenom" id="iprenom">
-                    <label for="imail">Mail : </label> <input type="email" name="imail" id="imail">
-                    <input type="submit" value="S'inscrire" name="inscrire" id="inscrire">
-                </fieldset>
+                <div class="panel panel-default">
+                    <div class="panel-heading">S'inscrire</div>
+                    <div class="panel-body">
+                        <div>
+                            <label for="ipseudo">Pseudo : </label> <input type="text" name="ipseudo" id="ipseudo">
+                        </div>
+                        <div>
+                            <label for="imdp">Mot de passe : </label> <input type="password" name="imdp" id="imdp">
+                        </div>
+                        <div>
+                            <label for="inom">Nom : </label> <input type="text" name="inom" id="inom">
+                        </div>
+                        <div>
+                            <label for="iprenom">Prénom : </label> <input type="text" name="iprenom" id="iprenom">
+                        </div>
+                        <div>
+                            <label for="imail">Mail : </label> <input type="email" name="imail" id="imail">
+                        </div>
+                        <div>
+                            <input type="submit" value="S'inscrire" name="inscrire" id="inscrire">
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
         <div class="col-lg-6">
             <form method="post" action="${pageContext.request.contextPath}/authentification">
-                <fieldset>
-                    <legend>Se Connecter</legend>
-                    <label for="cpseudo">Pseudo : </label> <input type="text" name="cpseudo" id="cpseudo"/>
-                    <label for="cmdp"> Mot de Passe : </label> <input type="password" name="cmdp" id="cmdp"/>
-                    <input type="submit" value="Connection" name="connection" id="connection">
-                </fieldset>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Se Connecter</div>
+                    <div class="panel-body">
+                        <div>
+                            <label for="cpseudo">Pseudo : </label> <input type="text" name="cpseudo" id="cpseudo"/>
+                        </div>
+                        <div>
+                            <label for="cmdp"> Mot de Passe : </label> <input type="password" name="cmdp" id="cmdp"/>
+                        </div>
+                        <div>
+                            <input type="submit" value="Connection" name="connection" id="connection">
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
