@@ -37,11 +37,11 @@
             <form method="post" action="${pageContext.request.contextPath}/profile">
                 <fieldset>
                     <legend>Profile</legend>
-                    <label> Pseudo : </label> <input type="text" name="pseudo" placeholder="<c:out value="${ profile.getPseudo() }"/>">
-                    <label> Mot de passe :</label> <input type="password" name="mdp" placeholder="<c:out value="${ profile.getMdp() }"/>">
-                    <label> Nom : </label> <input type="text" name="nom" placeholder="<c:out value="${ profile.getNom() }"/>">
-                    <label> Prénom : </label> <input type="text" name="prenom" placeholder="<c:out value="${ profile.getPrenom() }"/>">
-                    <label> Mail : </label> <input type="text" name="mail" placeholder="<c:out value="${ profile.getMail() }"/>">
+                    <label for="pseudo"> Pseudo : </label> <input type="text" name="pseudo" id="pseudo" placeholder="<c:out value="${ profile.getPseudo() }"/>">
+                    <label for="mdp"> Mot de passe :</label> <input type="password" name="mdp"  id="mdp" placeholder="<c:out value="${ profile.getMdp() }"/>">
+                    <label for="nom"> Nom : </label> <input type="text" name="nom" id="nom" placeholder="<c:out value="${ profile.getNom() }"/>">
+                    <label for="prenom"> Prénom : </label> <input type="text" name="prenom" id="prenom" placeholder="<c:out value="${ profile.getPrenom() }"/>">
+                    <label for="mail"> Mail : </label> <input type="text" name="mail" id="mail" placeholder="<c:out value="${ profile.getMail() }"/>">
                 </fieldset>
             </form>
         </div>

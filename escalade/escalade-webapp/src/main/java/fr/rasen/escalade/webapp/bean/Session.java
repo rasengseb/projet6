@@ -1,39 +1,25 @@
 package fr.rasen.escalade.webapp.bean;
 
+import fr.rasen.escalade.model.bean.Utilisateur;
+
 import javax.inject.Named;
 
 @Named
 public class Session {
 
-    private int idCurrentUser;
-    private String loginCurrentUser;
+   private Utilisateur utilisateur;
 
-    public Session() {
-        this.idCurrentUser = 7;
-        this.loginCurrentUser = "007";
+
+
+    public Utilisateur getUtilisateur() {
+        return utilisateur;
     }
 
-    public int getIdCurrentUser() {
-        return idCurrentUser;
+    public void setUtilisateur(Utilisateur utilisateur) {
+        this.utilisateur = utilisateur;
     }
 
-    public void setIdCurrentUser(int idCurrentUser) {
-        this.idCurrentUser = idCurrentUser;
-    }
-
-    public String getLoginCurrentUser() {
-        return loginCurrentUser;
-    }
-
-    public void setLoginCurrentUser(String loginCurrentUser) {
-        this.loginCurrentUser = loginCurrentUser;
-    }
-
-    @Override
-    public String toString() {
-        return "Session{" +
-                "idCurrentUser=" + idCurrentUser +
-                ", loginCurrentUser='" + loginCurrentUser + '\'' +
-                '}';
+    public String showUser(){
+        return utilisateur.toString();
     }
 }

@@ -30,7 +30,8 @@ public class Profile extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        System.out.println(session.toString());
+        System.out.println(session.showUser());
+        request.setAttribute("profile", session.getUtilisateur());
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);;
     }
