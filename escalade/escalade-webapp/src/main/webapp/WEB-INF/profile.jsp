@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,23 +40,28 @@
                     <div class="panel-body">
                         <div>
                             <label for="pseudo"> Pseudo : </label> <input type="text" name="pseudo" id="pseudo"
-                                                                          value = "<c:out value="${ profile.getPseudo() }"/>" disabled >
+                                                                          value="${ profile.getPseudo() }"
+                                                                          readonly/>
                         </div>
                         <div>
                             <label for="mdp"> Mot de passe :</label> <input type="password" name="mdp" id="mdp"
-                                                                            placeholder="<c:out value="${ profile.getMdp() }"/>" disabled >
+                                                                            value="${ profile.getMdp() }"
+                                                                            readonly/>
                         </div>
                         <div>
                             <label for="nom"> Nom : </label> <input type="text" name="nom" id="nom"
-                                                                    placeholder="<c:out value="${ profile.getNom() }"/>" disabled >
+                                                                    value="${ profile.getNom() }"
+                                                                    readonly/>
                         </div>
                         <div>
                             <label for="prenom"> Prénom : </label> <input type="text" name="prenom" id="prenom"
-                                                                          placeholder="<c:out value="${ profile.getPrenom() }"/>" disabled >
+                                                                          value="${ profile.getPrenom() }"
+                                                                          readonly/>
                         </div>
                         <div>
                             <label for="mail"> Mail : </label> <input type="text" name="mail" id="mail"
-                                                                      placeholder="<c:out value="${ profile.getMail() }"/>" disabled >
+                                                                      value="${ profile.getMail() }"
+                                                                      readonly/>
                         </div>
                         <div>
                             <input type="submit" name="modifier" id="modifier" value="Modifier">
