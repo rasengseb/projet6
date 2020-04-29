@@ -77,7 +77,7 @@
                             <label for="cmdp"> Mot de Passe : </label> <input type="password" name="cmdp" id="cmdp"/>
                         </div>
                         <div>
-                            <input type="submit" value="Connection" name="connection" id="connection">
+                            <input type="submit" value="Connection" name="connection" id="connection" onclick="Alert()">
                         </div>
                     </div>
                 </div>
@@ -106,6 +106,11 @@
     </div>
 </footer>
 
+<script>
+    function Alert() {
+        alert("Connexion Réussi !")
+    }
+</script>
 
 </body>
 </html>
