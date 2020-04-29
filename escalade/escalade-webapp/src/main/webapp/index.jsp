@@ -12,45 +12,50 @@
 
 <body>
 
-    <div class="row">
-        <div class="navbar navbar-default">
-            <div class="col-lg-6">
-                <h1 href="#">Les Amis de l'escalade</h1>
-            </div>
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-offset-2 col-lg-3">
-                        <a href="">Rechercher</a>
-                    </div>
-                    <div class="col-lg-offset-2 col-lg-3">
+<div class="row">
+    <div class="navbar navbar-default">
+        <div class="col-lg-6">
+            <h1><a href="${pageContext.request.contextPath}/accueil">Les Amis de l'escalade </a></h1>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-3">
+                    <a href="">Rechercher</a>
+                </div>
+                <div class="col-lg-offset-2 col-lg-3">
+                    <c:if test="${ user }">
+                        <a href="${pageContext.request.contextPath}/profile"> Profile</a>
+                    </c:if>
+                    <c:if test="${ visiteur }">
                         <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
-                    </div>
+                    </c:if>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <%--Corps de la page web--%>
+<%--Corps de la page web--%>
 
 
-    <footer>
-        <div class="row">
-            <div class="col-lg-offset-2 col-lg-3">
-                <div class="col-lg-offset-1 col-lg-2">
-                    <button class="btn btn-primary" type="submit">Facebook</button>
-                </div>
-                <div class="col-lg-offset-1 col-lg-2">
-                    <button class="btn btn-primary" type="submit">Twitter</button>
-                </div>
-                <div class="col-lg-offset-1 col-lg-2">
-                    <button class="btn btn-primary" type="submit">Instagram</button>
-                </div>
+<footer>
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-3">
+            <div class="col-lg-offset-1 col-lg-2">
+                <button class="btn btn-primary" type="submit">Facebook</button>
             </div>
-            <div class="col-lg-offset-2 col-lg-3">
-                <a href="#">Nous Contacter</a>
+            <div class="col-lg-offset-1 col-lg-2">
+                <button class="btn btn-primary" type="submit">Twitter</button>
+            </div>
+            <div class="col-lg-offset-1 col-lg-2">
+                <button class="btn btn-primary" type="submit">Instagram</button>
             </div>
         </div>
-    </footer>
+        <div class="col-lg-offset-2 col-lg-3">
+            <a href="#">Nous Contacter</a>
+        </div>
+    </div>
+</footer>
 
 
 </body>

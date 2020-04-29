@@ -7,8 +7,8 @@ import javax.inject.Named;
 @Named
 public class Session {
 
-   private Utilisateur utilisateur;
-
+    private Utilisateur utilisateur;
+    private boolean connecte = false;
 
 
     public Utilisateur getUtilisateur() {
@@ -19,7 +19,15 @@ public class Session {
         this.utilisateur = utilisateur;
     }
 
-    public String showUser(){
+    public boolean isConnecte() {
+        return connecte;
+    }
+
+    public void setConnecte(boolean connecte) {
+        this.connecte = connecte;
+    }
+
+    public String showUser() {
         return utilisateur.toString();
     }
 }
