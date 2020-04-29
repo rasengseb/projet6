@@ -34,7 +34,7 @@ public class Accueil extends HttpServlet {
         request.setAttribute("visiteur", visiteur );
         request.setAttribute("user", user );
 
-        this.getServletContext().getRequestDispatcher("index.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         ;
     }
 
@@ -42,7 +42,7 @@ public class Accueil extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        this.getServletContext().getRequestDispatcher("index.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         ;
     }
 }

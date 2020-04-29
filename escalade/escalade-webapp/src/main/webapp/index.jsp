@@ -36,7 +36,16 @@
 </div>
 
 <%--Corps de la page web--%>
-
+<div class="container">
+    <div class="row">
+        <div class="col-lg-offset-3 col-lg-6">
+            <h2>Bienvenue !</h2>
+            <p>Les Amis de l'Escalde est un site ayant pour but de référencer un maximum de site d'escalade pour qu'aussi bien les amateurs curieux que les aventuriers chevronnés
+            puissent trouver un endroit ou profiter de leur passion.</p>
+            <p>Le site est actuellement en création, donc incomplet.</p>
+        </div>
+    </div>
+</div>
 
 <footer>
     <div class="row">
