@@ -29,10 +29,7 @@ public class Accueil extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        boolean visiteur = true;
-        boolean user = false;
-        request.setAttribute("visiteur", visiteur );
-        request.setAttribute("user", user );
+        request.setAttribute("connecte", session.getConnecte());
 
         this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         ;

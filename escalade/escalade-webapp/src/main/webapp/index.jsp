@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="utf-8"/>
+    <link rel="stylesheet" href="WEB-INF/css/escalade.css">
     <title>Les Amis de l'escalade</title>
 </head>
 
@@ -23,12 +24,14 @@
                     <a href="">Rechercher</a>
                 </div>
                 <div class="col-lg-offset-2 col-lg-3">
-                    <c:if test="${ user }">
-                        <a href="${pageContext.request.contextPath}/profile"> Profile</a>
-                    </c:if>
-                    <c:if test="${ visiteur }">
-                        <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
-                    </c:if>
+<%--                    <c:choose>--%>
+<%--                        <c:when test="${ connecte == 1 }">--%>
+<%--                            <p><a href="${pageContext.request.contextPath}/profile"> Profile</a></p>--%>
+<%--                        </c:when>--%>
+<%--                        <c:when test="${ connecte == 0 }">--%>
+    <p><a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a></p>
+<%--                        </c:when>--%>
+<%--                    </c:choose>--%>
                 </div>
             </div>
         </div>
