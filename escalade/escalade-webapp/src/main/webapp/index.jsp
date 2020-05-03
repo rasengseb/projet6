@@ -24,14 +24,14 @@
                     <a href="">Rechercher</a>
                 </div>
                 <div class="col-lg-offset-2 col-lg-3">
-<%--                    <c:choose>--%>
-<%--                        <c:when test="${ connecte == 1 }">--%>
-<%--                            <p><a href="${pageContext.request.contextPath}/profile"> Profile</a></p>--%>
-<%--                        </c:when>--%>
-<%--                        <c:when test="${ connecte == 0 }">--%>
-    <p><a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a></p>
-<%--                        </c:when>--%>
-<%--                    </c:choose>--%>
+                    <c:choose>
+                        <c:when test="${ connecte == 'true' }">
+                            <p><a href="${pageContext.request.contextPath}/profile"> Profile</a></p>
+                        </c:when>
+                        <c:when test="${ connecte == 'false' }">
+                            <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
+                        </c:when>
+                    </c:choose>
                 </div>
             </div>
         </div>
@@ -43,8 +43,9 @@
     <div class="row">
         <div class="col-lg-offset-3 col-lg-6">
             <h2>Bienvenue !</h2>
-            <p>Les Amis de l'Escalde est un site ayant pour but de référencer un maximum de site d'escalade pour qu'aussi bien les amateurs curieux que les aventuriers chevronnés
-            puissent trouver un endroit ou profiter de leur passion.</p>
+            <p>Les Amis de l'Escalde est un site ayant pour but de référencer un maximum de site d'escalade pour
+                qu'aussi bien les amateurs curieux que les aventuriers chevronnés
+                puissent trouver un endroit ou profiter de leur passion.</p>
             <p>Le site est actuellement en création, donc incomplet.</p>
         </div>
     </div>
