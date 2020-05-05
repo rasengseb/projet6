@@ -1,43 +1,16 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="../css/escalade.css">
-    <title>Les Amis de l'escalade</title>
+    <%@ include file="_include/head.jsp" %>
+    <style type="text/css">
+        <%@include file="../css/escalade.css" %>
+    </style>
 </head>
 
 <body>
 
-<div class="row">
-    <div class="navbar navbar-default">
-        <div class="col-lg-6">
-            <h1><a href="${pageContext.request.contextPath}/accueil">Les Amis de l'escalade </a></h1>
-        </div>
-        <div class="col-lg-6">
-            <div class="row">
-                <div class="col-lg-offset-2 col-lg-3">
-                    <a href="">Rechercher</a>
-                </div>
-                <div class="col-lg-offset-2 col-lg-3">
-                    <c:choose>
-                        <c:when test="${ connecte==true }">
-                            <a href="${pageContext.request.contextPath}/profile"> Profile</a>
-                        </c:when>
-                        <c:when test="${ connecte==false }">
-                            <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
-                        </c:when>
-                    </c:choose>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<%@ include file="_include/header.jsp" %>
 
 <%--Corps de la page web--%>
 <div class="container">
@@ -66,21 +39,16 @@
                             <button data-toggle="modal" href="#info-inscription" class="btn btn-primary" name="inscrire"
                                     id="inscrire">S'inscrire
                             </button>
-                            <div class="modal" id="info-inscription">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">x</button>
-                                            <h4 class="modal-title">Inscription</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            Inscription Réussi !
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <c:if test="${ checkInsert }">
+                        <div class="alert alert-success" role="alert"><c:out value="${ messageInscription }" /></div>
+                    </c:if>
+                    <c:if test="${ !checkInsert && !empty messageInscription }">
+                        <div class="alert alert-danger" role="alert"><c:out value="${ messageInscription }" /></div>
+                    </c:if>
                 </div>
             </form>
         </div>
@@ -96,49 +64,25 @@
                             <label for="cmdp"> Mot de Passe : </label> <input type="password" name="cmdp" id="cmdp"/>
                         </div>
                         <div>
-                            <button data-toggle="modal" href="#info-connexion" class="btn btn-primary" name="connection"
+                            <button data-toggle="modal" class="btn btn-primary" name="connection"
                                     id="connection">Connection
                             </button>
-                            <div class="modal" id="info-connexion">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">x</button>
-                                            <h4 class="modal-title">Connexion</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            Connexion Réussi !
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <c:if test="${ !empty messageConnexion }">
+                        <div class="alert alert-danger" role="alert"><c:out value="${messageConnexion}" /></div>
+                    </c:if>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
+<%@ include file="_include/footer.jsp" %>
 
-<footer>
-    <div class="row">
-        <div class="col-lg-offset-2 col-lg-3">
-            <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Facebook</button>
-            </div>
-            <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Twitter</button>
-            </div>
-            <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Instagram</button>
-            </div>
-        </div>
-        <div class="col-lg-offset-2 col-lg-3">
-            <a href="${pageContext.request.contextPath}/contact">Nous Contacter</a>
-        </div>
-    </div>
-</footer>
+<%@ include file="_include/bootstrap-js.jsp" %>
 
 </body>
 </html>
