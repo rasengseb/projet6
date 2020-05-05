@@ -24,14 +24,14 @@
                     <a href="">Rechercher</a>
                 </div>
                 <div class="col-lg-offset-2 col-lg-3">
-                    <c:choose>
-                        <c:when test="${ connecte == 'true' }">
-                            <p><a href="${pageContext.request.contextPath}/profile"> Profile</a></p>
-                        </c:when>
-                        <c:when test="${ connecte == 'false' }">
+<%--                    <c:choose>--%>
+<%--                        <c:when test="${ connecte == 'true' }">--%>
+<%--                            <p><a href="${pageContext.request.contextPath}/profile"> Profile</a></p>--%>
+<%--                        </c:when>--%>
+<%--                        <c:when test="${ connecte == 'false' }">--%>
                             <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
-                        </c:when>
-                    </c:choose>
+<%--                        </c:when>--%>
+<%--                    </c:choose>--%>
                 </div>
             </div>
         </div>

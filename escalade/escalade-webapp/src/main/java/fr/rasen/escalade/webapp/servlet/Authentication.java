@@ -36,7 +36,7 @@ public class Authentication extends HttpServlet {
         System.out.println("doGet");
         System.out.println(request.getParameter("cpseudo") + " - " + request.getParameter("cmdp"));
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/connexion.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/connexion.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -69,6 +69,6 @@ public class Authentication extends HttpServlet {
         }
 
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/connexion.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/connexion.jsp").forward(request, response);
     }
 }
