@@ -4,10 +4,10 @@
               auth="Container"
               type="javax.sql.DataSource"
 
-              url="jdbc:postgresql://localhost:5433/escalade"
+              url="jdbc:postgresql://localhost:5432/SLB-escalade"
               driverClassName="org.postgresql.Driver"
-              username="rasen"
-              password="Sebastien2"
+              username="OC_Cours_JavaEE"
+              password="OC-Cours-JavaEE"
               defaultAutoCommit="true"
               defaultTransactionIsolation="READ_COMMITTED"
 

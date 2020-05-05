@@ -24,7 +24,13 @@ public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSource());
         List<Utilisateur> listUtilisateur = jdbcTemplate.query(vSQL, utilisateurRM);
-        Utilisateur utilisateur = listUtilisateur.get(0);
+
+        Utilisateur utilisateur = new Utilisateur();
+        try {
+            utilisateur = listUtilisateur.get(0);
+        } catch ( IndexOutOfBoundsException e) {
+            e.getMessage();
+        }
 
         return  utilisateur;
     }
