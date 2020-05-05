@@ -134,7 +134,7 @@
             </div>
         </div>
         <div class="col-lg-offset-2 col-lg-3">
-            <a href="#">Nous Contacter</a>
+            <a href="${pageContext.request.contextPath}/contact">Nous Contacter</a>
         </div>
     </div>
 </footer>
