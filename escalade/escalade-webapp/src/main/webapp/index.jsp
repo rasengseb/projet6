@@ -23,14 +23,6 @@
                     puissent trouver un endroit ou profiter de leur passion.</p>
                 <p>Le site est actuellement en création, donc incomplet.</p>
             </div>
-
-            <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Instagram</button>
-            </div>
-        </div>
-        <div class="col-lg-offset-2 col-lg-3">
-            <a href="${pageContext.request.contextPath}/contact">Nous Contacter</a>
-
         </div>
     </div>
 

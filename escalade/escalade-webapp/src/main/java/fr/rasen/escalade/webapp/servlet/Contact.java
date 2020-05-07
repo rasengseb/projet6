@@ -29,6 +29,11 @@ public class Contact extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        System.out.println(" Contact doGet");
+
+        request.setAttribute("email", session.getUtilisateur().getMail());
+        request.setAttribute("connecte", session.getConnecte());
+
         this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/contact.jsp").forward(request, response);
         ;
     }
@@ -36,6 +41,11 @@ public class Contact extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
+        System.out.println(" Contact doPost");
+
+        request.setAttribute("email", session.getUtilisateur().getMail());
+        request.setAttribute("connecte", session.getConnecte());
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/contact.jsp").forward(request, response);
         ;

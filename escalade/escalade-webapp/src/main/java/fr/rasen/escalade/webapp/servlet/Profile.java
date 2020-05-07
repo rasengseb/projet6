@@ -29,8 +29,13 @@ public class Profile extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        System.out.println(" Profile doGet");
+
         System.out.println(session.showUser());
         request.setAttribute("profile", session.getUtilisateur());
+
+        request.setAttribute("email", session.getUtilisateur().getMail());
+        request.setAttribute("connecte", session.getConnecte());
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/profile.jsp").forward(request, response);
         ;
@@ -40,7 +45,11 @@ public class Profile extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        System.out.println(" Contact doPost");
+
+        request.setAttribute("email", session.getUtilisateur().getMail());
+        request.setAttribute("connecte", session.getConnecte());
+
         this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/profile.jsp").forward(request, response);
-        ;
     }
 }

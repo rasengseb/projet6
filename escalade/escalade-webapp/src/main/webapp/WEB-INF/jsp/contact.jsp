@@ -2,41 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="../css/escalade.css">
-    <title>Les Amis de l'escalade</title>
+    <%@ include file="_include/head.jsp" %>
+    <style type="text/css">
+        <%@include file="../css/escalade.css" %>
+    </style>
 </head>
 
 <body>
 
-<div class="row">
-    <div class="navbar navbar-default">
-        <div class="col-lg-6">
-            <h1><a href="${pageContext.request.contextPath}/accueil">Les Amis de l'escalade </a></h1>
-        </div>
-        <div class="col-lg-6">
-            <div class="row">
-                <div class="col-lg-offset-2 col-lg-3">
-                    <a href="">Rechercher</a>
-                </div>
-                <div class="col-lg-offset-2 col-lg-3">
-                    <c:choose>
-                        <c:when test="${ connecte == 'true' }">
-                            <p><a href="${pageContext.request.contextPath}/profile"> Profile</a></p>
-                        </c:when>
-                        <c:when test="${ connecte == 'false' }">
-                            <a href="${pageContext.request.contextPath}/authentification">Log in/ Sign up</a>
-                        </c:when>
-                    </c:choose>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<%@ include file="_include/header.jsp" %>
 
 <%--Corps de la page web--%>
 <div class="container">
@@ -62,24 +36,9 @@
     </div>
 </div>
 
-<footer>
-    <div class="row">
-        <div class="col-lg-offset-2 col-lg-3">
-            <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Facebook</button>
-            </div>
-            <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Twitter</button>
-            </div>
-            <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Instagram</button>
-            </div>
-        </div>
-        <div class="col-lg-offset-2 col-lg-3">
-            <a href="${pageContext.request.contextPath}/contact">Nous Contacter</a>
-        </div>
-    </div>
-</footer>
+<%@ include file="_include/footer.jsp" %>
+
+<%@ include file="_include/bootstrap-js.jsp" %>
 
 
 </body>

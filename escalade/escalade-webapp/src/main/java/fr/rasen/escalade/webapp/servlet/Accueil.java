@@ -30,7 +30,12 @@ public class Accueil extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        request.setAttribute("connecte", session.getConnecte());
+        System.out.println("Accueil - doGet()");
+
+        if (session.getUtilisateur() != null) {
+            request.setAttribute("email", session.getUtilisateur().getMail());
+            request.setAttribute("connecte", session.getConnecte());
+        }
 
         this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }
@@ -38,6 +43,11 @@ public class Accueil extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
+        System.out.println("Accueil - doPost()");
+
+        request.setAttribute("email", session.getUtilisateur().getMail());
+        request.setAttribute("connecte", session.getConnecte());
 
         this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }

@@ -33,7 +33,7 @@ public class Authentication extends HttpServlet {
 
         System.out.println(session.toString());
 
-        System.out.println("doGet");
+        System.out.println(" Authentification doGet");
         System.out.println(request.getParameter("cpseudo") + " - " + request.getParameter("cmdp"));
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/connexion.jsp").forward(request, response);
@@ -42,6 +42,8 @@ public class Authentication extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
+        System.out.println(" Authentification doPost");
 
         //-- INSCRIPTION
         if (request.getParameter("inscrire") != null) {
