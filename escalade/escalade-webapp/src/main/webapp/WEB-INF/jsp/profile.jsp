@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <%@ include file="_include/head.jsp" %>
+    <%@ include file="/WEB-INF/jsp/_include/head.jsp" %>
     <style type="text/css">
         <%@include file="../css/escalade.css" %>
     </style>
@@ -10,7 +10,7 @@
 
 <body>
 
-<%@ include file="_include/header.jsp" %>
+<%@ include file="/WEB-INF/jsp/_include/header.jsp" %>
 
 <%--Corps de la page web--%>
 <div class="container">
@@ -56,9 +56,9 @@
     </div>
 </div>
 
-<%@ include file="_include/footer.jsp" %>
+<%@ include file="/WEB-INF/jsp/_include/footer.jsp" %>
 
-<%@ include file="_include/bootstrap-js.jsp" %>
+<%@ include file="/WEB-INF/jsp/_include/bootstrap-js.jsp" %>
 
 </body>
 </html>

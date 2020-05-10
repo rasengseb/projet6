@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <%@ include file="_include/head.jsp" %>
+    <%@ include file="/WEB-INF/jsp/_include/head.jsp" %>
+
     <style type="text/css">
         <%@include file="../css/escalade.css" %>
     </style>
@@ -10,7 +11,7 @@
 
 <body>
 
-<%@ include file="_include/header.jsp" %>
+<%@ include file="/WEB-INF/jsp/_include/header.jsp" %>
 
 <%--Corps de la page web--%>
 <div class="container">
@@ -44,10 +45,10 @@
                 </div>
                 <div>
                     <c:if test="${ checkInsert }">
-                        <div class="alert alert-success" role="alert"><c:out value="${ messageInscription }" /></div>
+                        <div class="alert alert-success" role="alert"><c:out value="${ messageInscription }"/></div>
                     </c:if>
                     <c:if test="${ !checkInsert && !empty messageInscription }">
-                        <div class="alert alert-danger" role="alert"><c:out value="${ messageInscription }" /></div>
+                        <div class="alert alert-danger" role="alert"><c:out value="${ messageInscription }"/></div>
                     </c:if>
                 </div>
             </form>
@@ -72,7 +73,7 @@
                 </div>
                 <div>
                     <c:if test="${ !empty messageConnexion }">
-                        <div class="alert alert-danger" role="alert"><c:out value="${messageConnexion}" /></div>
+                        <div class="alert alert-danger" role="alert"><c:out value="${messageConnexion}"/></div>
                     </c:if>
                 </div>
             </form>
@@ -80,9 +81,9 @@
     </div>
 </div>
 
-<%@ include file="_include/footer.jsp" %>
+<%@ include file="/WEB-INF/jsp/_include/footer.jsp" %>
 
-<%@ include file="_include/bootstrap-js.jsp" %>
+<%@ include file="/WEB-INF/jsp/_include/bootstrap-js.jsp" %>
 
 </body>
 </html>
