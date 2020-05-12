@@ -16,7 +16,7 @@
 <div class="container">
     <div class="row">
         <div class="col-offset-lg-3 col-lg-6">
-            <form method="post">
+            <form method="post" action="/contact">
                 <div class="panel panel-default">
                     <div class="panel-heading">Nous Contacter</div>
                     <div class="panel-body">
@@ -28,6 +28,9 @@
                         </div>
                         <div>
                             <label for="message">Message :</label> <textarea name="message" id="message"> </textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" id="envoyer" name="envoyer">Envoyer</button>
                         </div>
                     </div>
                 </div>

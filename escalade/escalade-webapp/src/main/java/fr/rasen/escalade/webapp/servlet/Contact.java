@@ -1,6 +1,8 @@
 package fr.rasen.escalade.webapp.servlet;
 
 import fr.rasen.escalade.webapp.bean.Session;
+import fr.rasen.escalade.webapp.resource.projectResource.ContactResource;
+import fr.rasen.escalade.webapp.resource.projectResource.UtilisateurResource;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.inject.Inject;
@@ -36,6 +38,17 @@ public class Contact extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+
+        if(request.getParameter("envoyer") != null){
+            System.out.println("ENVOIE DEMANDE");
+
+            String mail = request.getParameter("mail");
+            String objet = request.getParameter("objet");
+            String message = request.getParameter("message");
+
+            ContactResource contactResource = new ContactResource();
+            contactResource.addContact(mail, objet, message);
+        }
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/contact.jsp").forward(request, response);
         ;
