@@ -8,4 +8,5 @@ public interface UtilisateurDao {
 
     boolean addUtilisateur (Utilisateur utilisateur);
 
+    boolean majUtilisateur(Utilisateur utilisateur);
 }

@@ -17,5 +17,8 @@ public class UtilisateurResource extends AbstractResource {
         return getManagerFactory().getUtilisateurManager().addUtilisateur(utilisateur);
     }
 
+    public boolean majUtilisateur(Utilisateur utilisateur){
+        return getManagerFactory().getUtilisateurManager().majUtilisateur(utilisateur);
+    }
 
 }

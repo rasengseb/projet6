@@ -61,4 +61,30 @@ public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
         }
     }
 
+    @Override
+    public boolean majUtilisateur(Utilisateur utilisateur) {
+        String vSQL ="UPDATE utilisateur SET nom = '" +
+                utilisateur.getNom() +"', prenom = '" +
+                utilisateur.getPrenom() + "', pseudo = '" +
+                utilisateur.getPseudo() + "', mdp = '" +
+                utilisateur.getMdp() +"', mail = '" +
+                utilisateur.getMail() +"', isadmin = '" +
+                utilisateur.isAdmin() +"' WHERE id = '" +
+                utilisateur.getId() + "'";
+        MapSqlParameterSource vParams = new MapSqlParameterSource();
+        vParams.addValue("nom",utilisateur.getNom());
+        vParams.addValue("prenom",utilisateur.getPrenom());
+        vParams.addValue("pseudo",utilisateur.getPseudo());
+        vParams.addValue("mdp",utilisateur.getMdp());
+        vParams.addValue("mail",utilisateur.getMail());
+        vParams.addValue("isadmin",utilisateur.isAdmin());
+        NamedParameterJdbcTemplate vJdbcTemplate = new NamedParameterJdbcTemplate(getDataSource());
+        int vNbrLigneMaj = vJdbcTemplate.update(vSQL, vParams);
+        if (vNbrLigneMaj == 1){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

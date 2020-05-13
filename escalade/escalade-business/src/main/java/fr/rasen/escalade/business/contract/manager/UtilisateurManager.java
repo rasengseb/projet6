@@ -8,4 +8,5 @@ public interface UtilisateurManager {
 
     boolean addUtilisateur(Utilisateur utilisateur);
 
+    boolean majUtilisateur(Utilisateur utilisateur);
 }

@@ -19,4 +19,10 @@ public class UtilisateurManagerImpl extends AbstractManager implements Utilisate
         return getDaoFactory().getUtilisateurDao().addUtilisateur(utilisateur);
     }
 
+    @Override
+    public boolean majUtilisateur(Utilisateur utilisateur) {
+        return getDaoFactory().getUtilisateurDao().majUtilisateur(utilisateur);
+    }
+
+
 }
