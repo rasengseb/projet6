@@ -1,6 +1,7 @@
 package fr.rasen.escalade.business.contract;
 
 import fr.rasen.escalade.business.contract.manager.ContactManager;
+import fr.rasen.escalade.business.contract.manager.SiteManager;
 import fr.rasen.escalade.business.contract.manager.UtilisateurManager;
 
 public interface ManagerFactory {
@@ -12,4 +13,8 @@ public interface ManagerFactory {
     //CONTACT
     ContactManager getContactManager();
     void setContactManager(ContactManager pContactManager);
+
+    //SITE
+    SiteManager getSiteManager();
+    void setSiteManager(SiteManager pSiteManager);
 }

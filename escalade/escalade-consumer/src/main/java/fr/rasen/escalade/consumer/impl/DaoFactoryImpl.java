@@ -2,6 +2,7 @@ package fr.rasen.escalade.consumer.impl;
 
 import fr.rasen.escalade.consumer.contract.DaoFactory;
 import fr.rasen.escalade.consumer.contract.dao.ContactDao;
+import fr.rasen.escalade.consumer.contract.dao.SiteDao;
 import fr.rasen.escalade.consumer.contract.dao.UtilisateurDao;
 
 import javax.inject.Inject;
@@ -14,7 +15,8 @@ public class DaoFactoryImpl implements DaoFactory {
     UtilisateurDao utilisateurDaoImpl;
     @Inject
     ContactDao contactDaoImpl;
-
+    @Inject
+    SiteDao siteDaoImpl;
 
 
     //UTILISATEUR
@@ -23,6 +25,7 @@ public class DaoFactoryImpl implements DaoFactory {
     public UtilisateurDao getUtilisateurDao() {
         return utilisateurDaoImpl;
     }
+
     @Override
     public void setUtilisateurDao(UtilisateurDao pUtilisateurDao) {
         this.utilisateurDaoImpl = pUtilisateurDao;
@@ -37,6 +40,18 @@ public class DaoFactoryImpl implements DaoFactory {
     @Override
     public void setContactDao(ContactDao pContactDao) {
         contactDaoImpl = pContactDao;
+    }
+
+
+    //SITE
+    @Override
+    public SiteDao getSiteDao() {
+        return null;
+    }
+
+    @Override
+    public void setSiteDao(SiteDao pSiteDao) {
+
     }
 
 }
