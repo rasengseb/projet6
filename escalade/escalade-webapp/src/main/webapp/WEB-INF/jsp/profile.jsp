@@ -16,9 +16,16 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-offset-2 col-lg-8">
-            <form method="post" action="${pageContext.request.contextPath}/profile">
-                <div class="panel panel-default">
-                    <div class="panel-header">Profile</div>
+
+            <div class="panel panel-default">
+                <form method="get" action="${pageContext.request.contextPath}/ajoutSite">
+                    <div class="panel-header">Profile
+                        <div class="col-lg-offset-10 col-lg-2">
+                            <button class="btn btn-primary">Ajouter un Site</button>
+                        </div>
+                    </div>
+                </form>
+                <form method="post" action="${pageContext.request.contextPath}/profile">
                     <div class="panel-body">
                         <div>
                             <label for="pseudo"> Pseudo : </label> <input type="text" name="pseudo" id="pseudo"
@@ -49,9 +56,8 @@
                             <input type="submit" name="modifier" id="modifier" value="Modifier">
                         </div>
                     </div>
-                </div>
-                </fieldset>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>

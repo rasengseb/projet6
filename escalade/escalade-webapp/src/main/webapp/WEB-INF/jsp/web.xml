@@ -75,4 +75,13 @@
         <url-pattern>/contact</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AjoutSite</servlet-name>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.AjoutSite</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjoutSite</servlet-name>
+        <url-pattern>/ajoutSite</url-pattern>
+    </servlet-mapping>
+
 </web-app>
