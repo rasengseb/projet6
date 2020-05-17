@@ -68,9 +68,9 @@ public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
                 utilisateur.getPrenom() + "', pseudo = '" +
                 utilisateur.getPseudo() + "', mdp = '" +
                 utilisateur.getMdp() +"', mail = '" +
-                utilisateur.getMail() +"', isadmin = '" +
-                utilisateur.isAdmin() +"' WHERE id = '" +
-                utilisateur.getId() + "'";
+                utilisateur.getMail() +"', isadmin = " +
+                utilisateur.isAdmin() +" WHERE id = " +
+                utilisateur.getId();
         MapSqlParameterSource vParams = new MapSqlParameterSource();
         vParams.addValue("nom",utilisateur.getNom());
         vParams.addValue("prenom",utilisateur.getPrenom());

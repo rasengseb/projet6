@@ -1,9 +1,11 @@
 package fr.rasen.escalade.business.impl;
 
 import fr.rasen.escalade.business.contract.ManagerFactory;
+import fr.rasen.escalade.business.contract.manager.AdresseManager;
 import fr.rasen.escalade.business.contract.manager.ContactManager;
 import fr.rasen.escalade.business.contract.manager.SiteManager;
 import fr.rasen.escalade.business.contract.manager.UtilisateurManager;
+import fr.rasen.escalade.model.bean.Adresse;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -17,6 +19,8 @@ public class ManagerFactoryImpl implements ManagerFactory {
     private ContactManager contactManager;
     @Inject
     private SiteManager siteManager;
+    @Inject
+    private AdresseManager adresseManager;
 
 
     // UtilisateurManager : Getter et Setter
@@ -50,6 +54,17 @@ public class ManagerFactoryImpl implements ManagerFactory {
 
     @Override
     public void setSiteManager(SiteManager pSiteManager) {
+
+    }
+
+    //AdresseManager : Getter et Setter
+    @Override
+    public AdresseManager getAdresseManager() {
+        return null;
+    }
+
+    @Override
+    public void setAdresseManager(AdresseManager pAdresseManager) {
 
     }
 

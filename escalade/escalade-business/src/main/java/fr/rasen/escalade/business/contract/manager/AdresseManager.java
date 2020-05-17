@@ -1,8 +1,8 @@
-package fr.rasen.escalade.consumer.contract.dao;
+package fr.rasen.escalade.business.contract.manager;
 
 import fr.rasen.escalade.model.bean.Adresse;
 
-public interface AdresseDao {
+public interface AdresseManager {
 
     boolean addAdresse(Adresse adresse);
 }
