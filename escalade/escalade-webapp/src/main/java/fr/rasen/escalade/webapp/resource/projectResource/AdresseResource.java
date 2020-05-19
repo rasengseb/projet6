@@ -8,7 +8,11 @@ import javax.inject.Named;
 @Named
 public class AdresseResource extends AbstractResource {
 
-    boolean addAdresse(Adresse adresse){
+    public boolean addAdresse(Adresse adresse){
         return getManagerFactory().getAdresseManager().addAdresse(adresse);
+    }
+
+    public int getIdAdresse(Adresse adresse){
+        return getManagerFactory().getAdresseManager().getIdAdresse(adresse);
     }
 }

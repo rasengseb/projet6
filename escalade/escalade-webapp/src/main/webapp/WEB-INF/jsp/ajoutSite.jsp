@@ -18,9 +18,9 @@
         <div class="col-lg-offset-2 col-lg-8">
             <div class="panel panel-default">
                 <form method="get" action="#">
-                    <div class="panel-header">Profile
+                    <div class="panel-header">Ajout d'un site d'escalade
                         <div class="col-lg-offset-10 col-lg-2">
-                            <button class="btn btn-primary">Ajouter un Secteur</button>
+                            <a href="#">Ajouter un Secteur</a>
                         </div>
                     </div>
                 </form>

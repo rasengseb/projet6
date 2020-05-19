@@ -18,7 +18,7 @@ public class SiteDaoImpl extends AbstractDao implements SiteDao {
 
     @Override
     public boolean addSite(String nom, Adresse adresse) {
-        String vSQL ="INSERT INTO site (nom, adresse) VALUES ('" + nom +"', '" + adresse + "')";
+        String vSQL ="INSERT INTO site (nom, id_adresse) VALUES ('" + nom +"', '" + adresse.getId() + "')";
         MapSqlParameterSource vParams = new MapSqlParameterSource();
         vParams.addValue("nom", nom);
         vParams.addValue("id_adresse", adresse.getId());

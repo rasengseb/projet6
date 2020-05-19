@@ -49,23 +49,23 @@ public class ManagerFactoryImpl implements ManagerFactory {
     //SiteManager : Getter et Setter
     @Override
     public SiteManager getSiteManager() {
-        return null;
+        return siteManager;
     }
 
     @Override
     public void setSiteManager(SiteManager pSiteManager) {
-
+        siteManager = pSiteManager;
     }
 
     //AdresseManager : Getter et Setter
     @Override
     public AdresseManager getAdresseManager() {
-        return null;
+        return adresseManager;
     }
 
     @Override
     public void setAdresseManager(AdresseManager pAdresseManager) {
-
+        adresseManager = pAdresseManager;
     }
 
 

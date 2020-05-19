@@ -12,4 +12,9 @@ public class AdresseManagerImpl extends AbstractManager implements AdresseManage
     public boolean addAdresse(Adresse adresse) {
         return getDaoFactory().getAdresseDao().addAdresse(adresse);
     }
+
+    @Override
+    public int getIdAdresse(Adresse adresse) {
+        return getDaoFactory().getAdresseDao().getIdAdresse(adresse);
+    }
 }

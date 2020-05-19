@@ -2,23 +2,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <%@ include file="jsp/_include/head.jsp" %>
+    <%@ include file="/WEB-INF/jsp/_include/head.jsp" %>
 
     <style type="text/css">
-        <%@include file="css/escalade.css" %>
+        <%@include file="../css/escalade.css" %>
     </style>
 </head>
 
 <body>
 
 
-<%@ include file="jsp/_include/header.jsp" %>
+<%@ include file="/WEB-INF/jsp/_include/header.jsp" %>
 
 <H1>Recherche de site</H1>
 
-<%@include file="jsp/_include/footer.jsp" %>
+<%@include file="/WEB-INF/jsp/_include/footer.jsp" %>
 
-<%@include file="jsp/_include/bootstrap-js.jsp" %>
+<%@include file="/WEB-INF/jsp/_include/bootstrap-js.jsp" %>
 
 
 </body>

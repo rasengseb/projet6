@@ -2,6 +2,8 @@ package fr.rasen.escalade.webapp.servlet;
 
 import fr.rasen.escalade.model.bean.Adresse;
 import fr.rasen.escalade.webapp.bean.Session;
+import fr.rasen.escalade.webapp.resource.projectResource.AdresseResource;
+import fr.rasen.escalade.webapp.resource.projectResource.SiteRessource;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -21,7 +23,7 @@ public class AjoutSite  extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/ajoutSite.jsp").forward(request, response);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,13 +32,26 @@ public class AjoutSite  extends HttpServlet {
 
         if(request.getParameter("ajouter") != null){
             System.out.println("AJOUT SITE");
-            Adresse adresse = new Adresse();
+
 
             String nom = request.getParameter("nom");
-            adresse.setNumero(Integer.parseInt(request.getParameter("numero")));
-            adresse.setRue(request.getParameter("rue"));
-            adresse.setCodePostal(Integer.parseInt(request.getParameter("codePostal")));
-            adresse.setVille(request.getParameter("ville"));
+            int numero = Integer.parseInt(request.getParameter("numero"));
+            String rue = request.getParameter("rue");
+            int codePostal = Integer.parseInt(request.getParameter("codePostal"));
+            String ville = request.getParameter("ville");
+
+            Adresse adresse = new Adresse(numero, rue, codePostal, ville);
+            AdresseResource adresseResource = new AdresseResource();
+
+            boolean checkInsert = adresseResource.addAdresse(adresse);
+            adresse.setId(adresseResource.getIdAdresse(adresse));
+            System.out.println("Ajout adresse Réussi");
+
+
+            SiteRessource siteRessource = new SiteRessource();
+            siteRessource.addSite(nom, adresse);
+            System.out.println("Ajout Site Réussi");
+
         }
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/ajoutSite.jsp").forward(request, response);

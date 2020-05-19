@@ -9,6 +9,17 @@ public class Adresse {
     private Departement departement;
     private Region region;
 
+    public Adresse(int numero, String rue, int codePostal, String ville){
+        this.numero = numero;
+        this.rue = rue;
+        this.codePostal = codePostal;
+        this.ville = ville;
+    }
+
+    public Adresse (){
+
+    }
+
     public int getId() {
         return id;
     }

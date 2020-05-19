@@ -18,13 +18,11 @@
         <div class="col-lg-offset-2 col-lg-8">
 
             <div class="panel panel-default">
-                <form method="get" action="${pageContext.request.contextPath}/ajoutSite">
-                    <div class="panel-header">Profile
-                        <div class="col-lg-offset-10 col-lg-2">
-                            <button class="btn btn-primary">Ajouter un Site</button>
-                        </div>
+                <div class="panel-header">Profile
+                    <div class="col-lg-offset-10 col-lg-2">
+                        <a href="${pageContext.request.contextPath}/ajoutSite">Ajouter un site </a>
                     </div>
-                </form>
+                </div>
                 <form method="post" action="${pageContext.request.contextPath}/profile">
                     <div class="panel-body">
                         <div>
