@@ -3,13 +3,13 @@
     <div class="row">
         <div class="col-lg-offset-2 col-lg-3">
             <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Facebook</button>
+                <input type="image" id="facebook" alt="facebook" src="../ressources/facebook.png">
             </div>
             <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Twitter</button>
+                <input type="image" id="twitter" alt="twitter" src="../ressources/twitter.png">
             </div>
             <div class="col-lg-offset-1 col-lg-2">
-                <button class="btn btn-primary" type="submit">Instagram</button>
+                <input type="image" id="instagram" alt="instagram" src="../ressources/instagram.png">
             </div>
         </div>
         <div class="col-lg-offset-2 col-lg-3">

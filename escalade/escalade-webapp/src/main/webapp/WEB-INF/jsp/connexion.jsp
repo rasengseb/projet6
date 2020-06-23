@@ -4,9 +4,6 @@
 <head>
     <%@ include file="/WEB-INF/jsp/_include/head.jsp" %>
 
-    <style type="text/css">
-        <%@include file="../css/escalade.css" %>
-    </style>
 </head>
 
 <body>

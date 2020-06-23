@@ -3,4 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <meta charset="utf-8"/>
+<style type="text/css">
+    <%@include file="../../css/escalade.css" %>
+</style>
 <title>Les Amis de l'escalade</title>
