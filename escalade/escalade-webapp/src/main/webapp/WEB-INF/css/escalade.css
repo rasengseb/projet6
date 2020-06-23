@@ -1,3 +1,7 @@
+body{
+    padding-top: 100px;
+}
+
 label {
     width: 200px;
 }
@@ -11,51 +15,32 @@ footer {
     padding: 15px;
 }
 
-nav {
+.navbar-default{
     background-color: #3F3F3F;
+    padding: 15px;
+    border-color: #3F3F3F;
 }
 
-a {
+.navbar-brand{
+    background-color: #3f3f3f;
+    color: white;
+    font-family: "Showcard Gothic";
+    height: 80%;
+    padding-left: 20px;
+}
+
+.navbar-nav li a {
     color: white;
 }
 
-nav ul {
-    font-size: 0;
-    margin: 0;
-    padding: 0;
+ul{
+    list-style-type: none; /*annule les puces*/
 }
 
-nav ul li {
-    display: inline-block;
-    position: relative;
+
+.dropdown-menu li a {
+    background-color: #3f3f3f;
+    border-color: #3f3f3f;
+    color: white;
 }
 
-nav ul li a {
-    color: #3F3F3F;
-    display: block;
-    font-size: 14px;
-    padding: 15px 14px;
-    transition: 0.3s linear;
-}
-
-nav ul li ul {
-    border-bottom: 5px solid #2ba0db;
-    display: none;
-    position: absolute;
-    width: 250px;
-}
-
-nav ul li ul li {
-    border-top: 1px solid #444;
-    display: block;
-}
-
-nav ul li ul li:first-child {
-    border-top: none;
-}
-
-nav ul li ul li a {
-    background: #373737;
-    display: block;
-    padding: 10px 14px;
-}
