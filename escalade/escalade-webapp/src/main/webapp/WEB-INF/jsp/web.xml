@@ -84,4 +84,13 @@
         <url-pattern>/ajoutSite</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Rechercher</servlet-name>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.Rechercher</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Rechercher</servlet-name>
+        <url-pattern>/rechercher</url-pattern>
+    </servlet-mapping>
+
 </web-app>

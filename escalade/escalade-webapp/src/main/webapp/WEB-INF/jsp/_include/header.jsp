@@ -6,7 +6,7 @@
             <a class="navbar-brand" href="${pageContext.request.contextPath}/accueil">Les Amis de l'Escalade</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="#">Rechercher</a></li>
+            <li><a href="/rechercher">Rechercher</a></li>
             <c:choose>
                 <c:when test="${ connecte }">
                     <li><a data-toggle="dropdown" href="#">Profile<b class="caret"></b></a>
