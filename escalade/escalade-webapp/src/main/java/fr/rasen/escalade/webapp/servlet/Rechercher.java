@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("Rechercher")
+@WebServlet("/Rechercher")
 public class Rechercher extends HttpServlet {
 
     @Inject
@@ -29,10 +29,10 @@ public class Rechercher extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        System.out.println(session.showUser());
         request.setAttribute("profile", session.getUtilisateur());
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/profile.jsp").forward(request, response);
+
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/site.jsp").forward(request, response);
         ;
     }
 
@@ -41,7 +41,7 @@ public class Rechercher extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         request.setAttribute("profile", session.getUtilisateur());
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/profile.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/site.jsp").forward(request, response);
         ;
     }
 }

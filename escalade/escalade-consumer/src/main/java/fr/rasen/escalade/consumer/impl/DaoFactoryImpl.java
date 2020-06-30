@@ -1,10 +1,7 @@
 package fr.rasen.escalade.consumer.impl;
 
 import fr.rasen.escalade.consumer.contract.DaoFactory;
-import fr.rasen.escalade.consumer.contract.dao.AdresseDao;
-import fr.rasen.escalade.consumer.contract.dao.ContactDao;
-import fr.rasen.escalade.consumer.contract.dao.SiteDao;
-import fr.rasen.escalade.consumer.contract.dao.UtilisateurDao;
+import fr.rasen.escalade.consumer.contract.dao.*;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -20,6 +17,10 @@ public class DaoFactoryImpl implements DaoFactory {
     SiteDao siteDaoImpl;
     @Inject
     AdresseDao adresseDaoImpl;
+    @Inject
+    RegionDao regionDaoImpl;
+    @Inject
+    DepartementDao departementDaoImpl;
 
 
     //UTILISATEUR
@@ -68,4 +69,27 @@ public class DaoFactoryImpl implements DaoFactory {
         adresseDaoImpl = pAdresseDao;
     }
 
+    //REGION
+    @Override
+    public RegionDao getRegionDao() {
+        return regionDaoImpl;
+    }
+
+    @Override
+    public void setRegionDao(RegionDao pRegionDao) {
+        regionDaoImpl = pRegionDao;
+    }
+
+    //DEPARTEMENT
+    @Override
+    public DepartementDao getDepartementDao() {
+        return departementDaoImpl;
+    }
+
+    @Override
+    public void setDepartementDao(DepartementDao pDepartementDao) {
+        departementDaoImpl = pDepartementDao;
+    }
+
 }
+

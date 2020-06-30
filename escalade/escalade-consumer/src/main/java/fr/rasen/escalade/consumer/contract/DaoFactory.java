@@ -1,9 +1,7 @@
 package fr.rasen.escalade.consumer.contract;
 
-import fr.rasen.escalade.consumer.contract.dao.AdresseDao;
-import fr.rasen.escalade.consumer.contract.dao.ContactDao;
-import fr.rasen.escalade.consumer.contract.dao.SiteDao;
-import fr.rasen.escalade.consumer.contract.dao.UtilisateurDao;
+import fr.rasen.escalade.consumer.contract.dao.*;
+import fr.rasen.escalade.model.bean.Departement;
 
 public interface DaoFactory {
 
@@ -22,4 +20,12 @@ public interface DaoFactory {
     //ADRESSE
     AdresseDao getAdresseDao();
     void setAdresseDao(AdresseDao pAdresseDao);
+
+    //REGION
+    RegionDao getRegionDao();
+    void setRegionDao(RegionDao pRegionDao);
+
+    //DEPARTEMENT
+    DepartementDao getDepartementDao();
+    void setDepartementDao(DepartementDao pDepartementDao);
 }
