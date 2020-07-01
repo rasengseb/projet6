@@ -1,6 +1,8 @@
 package fr.rasen.escalade.webapp.servlet;
 
 import fr.rasen.escalade.webapp.bean.Session;
+import fr.rasen.escalade.webapp.resource.projectResource.DepartementResource;
+import fr.rasen.escalade.webapp.resource.projectResource.RegionResource;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.inject.Inject;
@@ -26,10 +28,18 @@ public class Rechercher extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RegionResource regionResource = new RegionResource();
+        session.setRegions(regionResource.getAllRegions());
+
+        DepartementResource departementResource = new DepartementResource();
+        session.setDepts(departementResource.getAllDepts());
+
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
         request.setAttribute("profile", session.getUtilisateur());
+        request.setAttribute("regions", session.getRegions());
+        request.setAttribute("depts", session.getDepts());
 
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/site.jsp").forward(request, response);
@@ -40,6 +50,8 @@ public class Rechercher extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         request.setAttribute("profile", session.getUtilisateur());
+        request.setAttribute("profile", session.getUtilisateur());
+        request.setAttribute("regions", session.getRegions());
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/site.jsp").forward(request, response);
         ;

@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface DepartementManager {
 
-    List getAll();
+    List<Departement> getAll();
 }

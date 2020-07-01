@@ -16,8 +16,19 @@
     <div class="panel panel-default">
         <div class="panel-heading">Rechercher un site</div>
         <div class="panel-body">
-            <label for="region">Sélectionnez une région</label> <input type="text" id="region" name="region">
-            <label for="dep">Sélectionnez un département</label> <input type="text" id="dep" name="dep">
+
+            <select class="regions">Régions
+                <c:forEach items="${ regions }" var="region" varStatus="status">
+                    <option value="<c:out value="${ status.count }"/>"> <c:out value="${ region.getNom() }"/></option>
+                </c:forEach>
+            </select>
+
+            <select class="depts">Départements
+                <c:forEach items="${ depts }" var="dept" varStatus="stauts">
+                    <option value="<c:out value="${ stauts.count }"/> "><c:out value="${ dept.getNom() }"/></option>
+                </c:forEach>
+            </select>
+
             <label for="site">Entrez le nom du site d'escalade</label> <input type="text" name="site" id="site">
         </div>
     </div>

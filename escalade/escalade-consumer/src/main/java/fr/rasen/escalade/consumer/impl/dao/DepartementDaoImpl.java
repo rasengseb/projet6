@@ -17,11 +17,9 @@ public class DepartementDaoImpl extends AbstractDao implements DepartementDao {
     DepartementRM departementRM;
 
     @Override
-    public List getAll() {
+    public List<Departement> getAll() {
         String vSQL = "SELECT * FROM departement";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSource());
-        List<Departement> listDept = jdbcTemplate.query(vSQL, departementRM);
-
-        return listDept;
+        return jdbcTemplate.query(vSQL, departementRM);
     }
 }

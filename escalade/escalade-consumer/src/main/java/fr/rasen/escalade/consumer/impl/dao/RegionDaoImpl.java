@@ -16,11 +16,10 @@ public class RegionDaoImpl extends AbstractDao implements RegionDao {
     RegionRM regionRM;
 
     @Override
-    public List getAll() {
+    public List<Region> getAll() {
         String vSQL = "SELECT * FROM region";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSource());
-        List<Region> listRegion = jdbcTemplate.query(vSQL, regionRM);
+        return jdbcTemplate.query(vSQL, regionRM);
 
-        return listRegion;
     }
 }
