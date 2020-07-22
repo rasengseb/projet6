@@ -85,6 +85,24 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>AjoutVoie</servlet-name>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.AjoutVoie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjoutVoie</servlet-name>
+        <url-pattern>/ajoutVoie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AjoutSecteur</servlet-name>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.AjoutSecteur</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjoutSecteur</servlet-name>
+        <url-pattern>/ajoutSecteur</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Rechercher</servlet-name>
         <servlet-class>fr.rasen.escalade.webapp.servlet.Rechercher</servlet-class>
     </servlet>

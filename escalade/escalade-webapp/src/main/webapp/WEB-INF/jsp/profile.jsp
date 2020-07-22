@@ -18,7 +18,7 @@
             <div class="panel panel-default">
                 <div class="panel-header">Profile
                     <div class="col-lg-offset-10 col-lg-2">
-                        <a href="${pageContext.request.contextPath}/ajoutSite">Ajouter un site </a>
+                        <a href="${pageContext.request.contextPath}/ajoutSite">Mes sites </a>
                     </div>
                 </div>
                 <form method="post" action="${pageContext.request.contextPath}/profile">

@@ -2,6 +2,7 @@ package fr.rasen.escalade.webapp.bean;
 
 import fr.rasen.escalade.model.bean.Departement;
 import fr.rasen.escalade.model.bean.Region;
+import fr.rasen.escalade.model.bean.Site;
 import fr.rasen.escalade.model.bean.Utilisateur;
 
 import javax.inject.Named;
@@ -14,6 +15,8 @@ public class Session {
     private boolean connecte = false;
     private List<Region> regions;
     private List<Departement> depts;
+
+    private Site site;
 
 
     public Utilisateur getUtilisateur() {
@@ -55,5 +58,13 @@ public class Session {
 
     public void setDepts(List<Departement> depts) {
         this.depts = depts;
+    }
+
+    public Site getSite() {
+        return site;
+    }
+
+    public void setSite(Site site) {
+        this.site = site;
     }
 }
