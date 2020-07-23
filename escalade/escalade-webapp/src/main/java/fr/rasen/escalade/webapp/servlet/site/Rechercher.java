@@ -1,6 +1,8 @@
-package fr.rasen.escalade.webapp.servlet;
+package fr.rasen.escalade.webapp.servlet.site;
 
 import fr.rasen.escalade.webapp.bean.Session;
+import fr.rasen.escalade.webapp.resource.projectResource.DepartementResource;
+import fr.rasen.escalade.webapp.resource.projectResource.RegionResource;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import javax.inject.Inject;
@@ -12,8 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/AjoutSecteur")
-public class AjoutSecteur extends HttpServlet {
+@WebServlet("/Rechercher")
+public class Rechercher extends HttpServlet {
 
     @Inject
     private Session session;
@@ -26,25 +28,32 @@ public class AjoutSecteur extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RegionResource regionResource = new RegionResource();
+        session.setRegions(regionResource.getAllRegions());
+
+        DepartementResource departementResource = new DepartementResource();
+        session.setDepts(departementResource.getAllDepts());
+
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+        request.setAttribute("profile", session.getUtilisateur());
+        request.setAttribute("regions", session.getRegions());
+        request.setAttribute("depts", session.getDepts());
 
-        if (session.getUtilisateur() != null) {
-            request.setAttribute("email", session.getUtilisateur().getMail());
-            request.setAttribute("connecte", session.getConnecte());
-        }
-        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/ajoutSecteur.jsp").forward(request, response);
+
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Site/rechercher.jsp").forward(request, response);
+        ;
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
+        request.setAttribute("profile", session.getUtilisateur());
+        request.setAttribute("profile", session.getUtilisateur());
+        request.setAttribute("regions", session.getRegions());
 
-        request.setAttribute("email", session.getUtilisateur().getMail());
-        request.setAttribute("connecte", session.getConnecte());
-
-        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/ajoutSecteur.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Site/rechercher.jsp").forward(request, response);
+        ;
     }
 }
-

@@ -1,4 +1,4 @@
-package fr.rasen.escalade.webapp.servlet;
+package fr.rasen.escalade.webapp.servlet.authentification;
 
 import fr.rasen.escalade.webapp.bean.Session;
 import fr.rasen.escalade.webapp.resource.projectResource.UtilisateurResource;
@@ -36,7 +36,7 @@ public class Authentication extends HttpServlet {
         System.out.println("doGet");
         System.out.println(request.getParameter("cpseudo") + " - " + request.getParameter("cmdp"));
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/connexion.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Authentification/connexion.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -69,7 +69,7 @@ public class Authentication extends HttpServlet {
                 request.setAttribute("messageInscription", "Inscription refusée !!!");
             }
 
-            this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/connexion.jsp").forward(request, response);
+            this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Authentification/connexion.jsp").forward(request, response);
         }
 
         //-- CONNEXION
@@ -86,10 +86,10 @@ public class Authentication extends HttpServlet {
                 session.setUtilisateur(utilisateur);
                 request.setAttribute("email", session.getUtilisateur().getMail());
                 request.setAttribute("connecte", session.getConnecte());
-                this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/site.jsp").forward(request, response);
+                this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
             } else {
                 request.setAttribute("messageConnexion", "Connexion refusée !!!");
-                this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/connexion.jsp").forward(request, response);
+                this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Authentification/connexion.jsp").forward(request, response);
             }
         }
     }

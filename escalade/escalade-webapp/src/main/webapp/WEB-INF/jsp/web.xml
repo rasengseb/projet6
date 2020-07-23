@@ -50,7 +50,7 @@
 
     <servlet>
         <servlet-name>Authentication</servlet-name>
-        <servlet-class>fr.rasen.escalade.webapp.servlet.Authentication</servlet-class>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.authentification.Authentication</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Authentication</servlet-name>
@@ -77,7 +77,7 @@
 
     <servlet>
         <servlet-name>AjoutSite</servlet-name>
-        <servlet-class>fr.rasen.escalade.webapp.servlet.AjoutSite</servlet-class>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.site.ajout.AjoutSite</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AjoutSite</servlet-name>
@@ -86,7 +86,7 @@
 
     <servlet>
         <servlet-name>AjoutVoie</servlet-name>
-        <servlet-class>fr.rasen.escalade.webapp.servlet.AjoutVoie</servlet-class>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.site.ajout.AjoutVoie</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AjoutVoie</servlet-name>
@@ -95,7 +95,7 @@
 
     <servlet>
         <servlet-name>AjoutSecteur</servlet-name>
-        <servlet-class>fr.rasen.escalade.webapp.servlet.AjoutSecteur</servlet-class>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.site.ajout.AjoutSecteur</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AjoutSecteur</servlet-name>
@@ -103,8 +103,17 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>AffichageSite</servlet-name>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.site.affichage.affichageSite</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AffichageSite</servlet-name>
+        <url-pattern>/affichageSite</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Rechercher</servlet-name>
-        <servlet-class>fr.rasen.escalade.webapp.servlet.Rechercher</servlet-class>
+        <servlet-class>fr.rasen.escalade.webapp.servlet.site.Rechercher</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Rechercher</servlet-name>

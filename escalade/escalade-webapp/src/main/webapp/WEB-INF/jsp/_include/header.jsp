@@ -12,7 +12,7 @@
                     <li><a data-toggle="dropdown" href="#">Profile<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="${pageContext.request.contextPath}/profile">Info profile</a></li>
-                            <li><a href="${pageContext.request.contextPath}/ajoutSite">Ajouter un site</a></li>
+                            <li><a href="${pageContext.request.contextPath}/affichageSite">Ajouter un site</a></li>
                         </ul>
                     </li>
                 </c:when>

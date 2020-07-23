@@ -12,7 +12,7 @@
 <%@ include file="/WEB-INF/jsp/_include/header.jsp" %>
 
 
-<form method="post" action="site.jsp">
+<form method="post" action="rechercher.jsp">
     <div class="panel panel-default">
         <div class="panel-heading">Rechercher un site</div>
         <div class="panel-body">

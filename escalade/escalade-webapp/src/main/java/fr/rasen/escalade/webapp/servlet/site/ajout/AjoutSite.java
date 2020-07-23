@@ -1,4 +1,4 @@
-package fr.rasen.escalade.webapp.servlet;
+package fr.rasen.escalade.webapp.servlet.site.ajout;
 
 import fr.rasen.escalade.model.bean.Adresse;
 import fr.rasen.escalade.webapp.bean.Session;
@@ -23,7 +23,7 @@ public class AjoutSite  extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/ajoutSite.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Site/ajout/ajoutSite.jsp").forward(request, response);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -54,6 +54,6 @@ public class AjoutSite  extends HttpServlet {
 
         }
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/ajoutSite.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Site/ajout/ajoutSite.jsp").forward(request, response);
     }
 }

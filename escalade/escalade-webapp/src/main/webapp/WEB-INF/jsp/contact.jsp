@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row">
         <div class="col-offset-lg-3 col-lg-6">
-            <form method="post" action="/contact">
+            <form method="post" action="${pageContext.request.contextPath}/contact">
                 <div class="panel panel-default">
                     <div class="panel-heading">Nous Contacter</div>
                     <div class="panel-body">

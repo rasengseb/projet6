@@ -1,4 +1,4 @@
-package fr.rasen.escalade.webapp.servlet;
+package fr.rasen.escalade.webapp.servlet.site.ajout;
 
 import fr.rasen.escalade.webapp.bean.Session;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/AjoutVoie")
-public class AjoutVoie extends HttpServlet {
+@WebServlet("/AjoutSecteur")
+public class AjoutSecteur extends HttpServlet {
 
     @Inject
     private Session session;
@@ -34,17 +34,17 @@ public class AjoutVoie extends HttpServlet {
             request.setAttribute("email", session.getUtilisateur().getMail());
             request.setAttribute("connecte", session.getConnecte());
         }
-        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/ajoutSite.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Site/ajout/ajoutSecteur.jsp").forward(request, response);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-
         request.setAttribute("email", session.getUtilisateur().getMail());
         request.setAttribute("connecte", session.getConnecte());
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/ajoutVoie.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Site/ajout/ajoutSecteur.jsp").forward(request, response);
     }
 }
+
