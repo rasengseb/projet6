@@ -14,26 +14,23 @@
     <div class="row">
         <div class="col-lg-offset-2 col-lg-8">
             <div class="panel panel-default">
-                <form method="get" action="#">
-                    <div class="panel-header">Ajout d'une voie
-                        <div class="col-lg-offset-10 col-lg-2">
-                            <a href="#">Ajouter une voie</a>
-                        </div>
-                    </div>
-                </form>
+                <div class="panel-header">Ajout d'une voie</div>
                 <form method="post" action="${pageContext.request.contextPath}/ajoutVoie">
                     <div class="panel-body">
                         <div>
                             <label for="nom"> Nom : </label> <input type="text" name="nom" id="nom"/>
                         </div>
                         <div>
-                            <label for="cotation"> Cotation : </label> <input type="text" name="cotation" id="cotation"/>
+                            <label for="cotation"> Cotation : </label> <input type="text" name="cotation"
+                                                                              id="cotation"/>
                         </div>
                         <div>
-                            <label for="longueur"> Longueur : </label> <input type="text" name="longueur" id="longueur"/>
+                            <label for="longueur"> Longueur : </label> <input type="text" name="longueur"
+                                                                              id="longueur"/>
                         </div>
                         <div>
-                            <label for="description"> Description : </label> <textarea name="description" id="description"></textarea>
+                            <label for="description"> Description : </label> <textarea name="description"
+                                                                                       id="description"></textarea>
                         </div>
                         <div>
                             <input type="submit" name="ajouter" id="ajouter" value="Ajouter">

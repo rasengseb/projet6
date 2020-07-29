@@ -11,6 +11,17 @@
 
 <%--Corps de la page web--%>
 <div class="container">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-header"><c:out value="${ secteur.getNom() }"></div>
+            </div>
+            <div class="panel-body">
+
+            </div>
+        </div>
+    </div>
+
     <form metohd="post" action="${pageContext.request.contextPath}/ajoutVoie">
         <div class="row">
             <button class="btn btn-primary" id="envoyer" name="envoyer">Ajouter voie</button>

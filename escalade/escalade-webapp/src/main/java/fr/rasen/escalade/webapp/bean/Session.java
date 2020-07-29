@@ -13,10 +13,6 @@ public class Session {
 
     private Utilisateur utilisateur;
     private boolean connecte = false;
-    private List<Region> regions;
-    private List<Departement> depts;
-
-    private Site site;
 
 
     public Utilisateur getUtilisateur() {
@@ -44,27 +40,4 @@ public class Session {
         return connecte;
     }
 
-    public List<Region> getRegions() {
-        return regions;
-    }
-
-    public void setRegions(List<Region> regions) {
-        this.regions = regions;
-    }
-
-    public List<Departement> getDepts() {
-        return depts;
-    }
-
-    public void setDepts(List<Departement> depts) {
-        this.depts = depts;
-    }
-
-    public Site getSite() {
-        return site;
-    }
-
-    public void setSite(Site site) {
-        this.site = site;
-    }
 }
