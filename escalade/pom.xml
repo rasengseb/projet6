@@ -8,6 +8,21 @@
     <artifactId>escalade</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.rasen</groupId>
+            <artifactId>escalade-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>fr.rasen</groupId>
+            <artifactId>escalade-model</artifactId>
+        </dependency>
+    </dependencies>
 
     <name>escalade</name>
     <!-- FIXME change it to the project's website -->
@@ -64,6 +79,18 @@
                 <groupId>${project.groupId}</groupId>
                 <artifactId>escalade-model</artifactId>
                 <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <!-- HIBERNATE -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.21</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>5.2.10.Final</version>
             </dependency>
 
             <!-- JSTL 1.2 -->
