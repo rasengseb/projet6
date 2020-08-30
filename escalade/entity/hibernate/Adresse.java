@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Adresse {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private int numero;
     private String rue;
     private int codePostal;
@@ -23,11 +23,11 @@ public class Adresse {
     public Adresse() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

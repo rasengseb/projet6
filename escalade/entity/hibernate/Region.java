@@ -10,7 +10,7 @@ import java.util.List;
 public class Region {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String nom;
     @ElementCollection
     private List<Departement> departements;
@@ -19,11 +19,11 @@ public class Region {
     public Region() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

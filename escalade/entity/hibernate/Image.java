@@ -12,7 +12,7 @@ import java.security.AllPermission;
 public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String Chemin;
     @ManyToOne (cascade = CascadeType.ALL)
     private Voie voie;
@@ -24,11 +24,11 @@ public class Image {
     public Image() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

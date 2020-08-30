@@ -13,7 +13,7 @@ import java.util.List;
 public class Site {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String nom;
     @OneToOne (cascade = CascadeType.ALL)
     private Adresse adresse;
@@ -28,11 +28,11 @@ public class Site {
     public Site() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

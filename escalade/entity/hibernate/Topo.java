@@ -10,7 +10,7 @@ import java.util.Date;
 public class Topo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String nom;
     private String description;
     @ManyToOne (cascade = CascadeType.ALL)
@@ -22,11 +22,11 @@ public class Topo {
     public Topo() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -72,7 +72,7 @@ public class Topo {
 
     @Override
     public String toString() {
-        return "Topo{" +
+        return "TopoDao{" +
                 "id=" + id +
                 ", nom='" + nom + '\'' +
                 ", description='" + description + '\'' +
